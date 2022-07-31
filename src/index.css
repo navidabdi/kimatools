@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700;900&display=swap');
 
 * {
@@ -7,21 +11,20 @@
 }
 
 :root {
-  // cloros
   --primary-color: #666af6;
   --secondery-color: #d3e3fd;
   --background-color: #f2f6fc;
   --title-color: #292831;
   --body-color: #343352;
   --white-color: #fff;
-  // border-raduis
+
   --xs-border-raduis: 5px;
   --s-border-raduis: 10px;
   --m-border-raduis: 15px;
   --l-border-raduis: 20px;
   --xl-border-raduis: 25px;
   --xxl-border-raduis: 30px;
-  // transitions
+
   --bg-transition-hover: background 0.15s ease-in;
 }
 
