@@ -1,3 +1,41 @@
 .menu__sidebar {
-  background: red;
+  background: var(--background-color);
+
+  // ul
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    // li
+    li {
+      padding: 0.6rem 1rem;
+      width: 100%;
+      transition: var(--bg-transition-hover);
+      &:hover {
+        background: var(--secondery-color);
+      }
+      // a
+      a {
+        display: block;
+        border-radius: var(--s-border-raduis);
+        overflow: hidden;
+        position: relative;
+        // img
+        img {
+          margin: auto;
+          width: 100%;
+        }
+        span {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          font-weight: 700;
+          color: var(--white-color);
+        }
+      }
+    }
+  }
 }

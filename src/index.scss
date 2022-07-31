@@ -6,12 +6,43 @@
   box-sizing: border-box;
 }
 
+:root {
+  // cloros
+  --primary-color: #666af6;
+  --secondery-color: #d3e3fd;
+  --background-color: #f2f6fc;
+  --title-color: #292831;
+  --body-color: #343352;
+  --white-color: #fff;
+  // border-raduis
+  --xs-border-raduis: 5px;
+  --s-border-raduis: 10px;
+  --m-border-raduis: 15px;
+  --l-border-raduis: 20px;
+  --xl-border-raduis: 25px;
+  --xxl-border-raduis: 30px;
+  // transitions
+  --bg-transition-hover: background 0.15s ease-in;
+}
+
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
+  background: var(--white-color);
+  color: var(--body-color);
 }
