@@ -13,7 +13,7 @@ const MainSection = () => {
   });
 
   return (
-    <section className="col-span-7 min-w-full">
+    <section className="col-span-7 p-10">
       <svg viewBox="0 0 900 600">
         <rect x="0" y="0" width="900" height="600" fill="#c3ccff"></rect>
         <path fill="purple" d={path} />

@@ -1,5 +1,5 @@
 const ToolsSidebar = () => {
-  return <aside className="col-span-2 min-w-full">ToolsSidebar</aside>;
+  return <aside className="col-span-2 bg-blue-50">ToolsSidebar</aside>;
 };
 
 export default ToolsSidebar;
