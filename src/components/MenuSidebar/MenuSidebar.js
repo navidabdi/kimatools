@@ -1,9 +1,8 @@
-import './MenuSidebar.scss';
 import blobImg from '../../img/blob-cover.png';
 
 const MenuSidebar = () => {
   return (
-    <aside className="menu__sidebar">
+    <aside className="col-span-1 min-w-full">
       <ul>
         <li>
           <a href="#">

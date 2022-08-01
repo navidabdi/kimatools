@@ -2,6 +2,7 @@
 import MenuSidebar from './MenuSidebar/MenuSidebar';
 import ToolsSidebar from './ToolsSidebar/ToolsSidebar';
 import MainSection from './MainSection/MainSection';
+import Header from './Header/Header';
 
 // Export components that we import to this index file
-export { MenuSidebar, ToolsSidebar, MainSection };
+export { MenuSidebar, ToolsSidebar, MainSection, Header };

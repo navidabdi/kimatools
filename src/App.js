@@ -1,11 +1,10 @@
-import './App.scss';
-
 // Import components
-import { MenuSidebar, ToolsSidebar, MainSection } from './components';
+import { MenuSidebar, ToolsSidebar, MainSection, Header } from './components';
 
 const App = () => {
   return (
-    <div className="app">
+    <div className="grid overflow-hidden grid-cols-10 grid-rows-1 gap-2">
+      <Header />
       <MenuSidebar />
       <MainSection />
       <ToolsSidebar />

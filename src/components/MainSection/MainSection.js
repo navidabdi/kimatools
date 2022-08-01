@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './MainSection.scss';
 import { blobGenerator } from '../../utils';
 
 const MainSection = () => {
@@ -7,16 +6,17 @@ const MainSection = () => {
   const [changeWidth, setChangeWidth] = useState('100');
 
   const { path } = blobGenerator({
-    size: 300,
+    size: 600,
     growth: 6,
     edges: 10,
     seed: null,
   });
 
   return (
-    <section className="main__section">
-      <svg viewBox="0 0 500 500">
-        <path d={path} />
+    <section className="col-span-7 min-w-full">
+      <svg viewBox="0 0 900 600">
+        <rect x="0" y="0" width="900" height="600" fill="#c3ccff"></rect>
+        <path fill="purple" d={path} />
       </svg>
     </section>
   );
