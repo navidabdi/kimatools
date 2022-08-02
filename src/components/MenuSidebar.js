@@ -1,4 +1,4 @@
-import blobImg from '../../img/blob-cover.png';
+import blobImg from '../img/blob-cover.png';
 
 const MenuSidebar = () => {
   return (
