@@ -23,7 +23,7 @@ const FlatUiColor = () => {
   };
   return (
     <>
-      <div className="color-container min-w-[83%]">
+      <div className="color-container">
         {chooseColorPalette.map((color) => (
           <Color
             key={color.id}
@@ -38,7 +38,7 @@ const FlatUiColor = () => {
           setCopyTriger={setCopyTriger}
         />
       </div>
-      {/* <audio className="sound-pick" src="./assets/audio.m4a"></audio> */}
+      <audio className="sound-pick" src="./assets/audio.m4a"></audio>
     </>
   );
 };

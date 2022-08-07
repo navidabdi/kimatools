@@ -1,7 +1,5 @@
 // Import components
-import { Header, Footer, ToolsSidebar } from "./components";
-import FlatUiColor from "./components/FlatUiColor/FlatUiColor";
-import { Routes, Route } from "react-router-dom";
+import { Header, Footer, ToolsSidebar, MainSection } from "./components";
 import { Link } from "react-router-dom";
 const App = () => {
   return (
@@ -15,17 +13,14 @@ const App = () => {
             </Link>
           </li>
           <li className="text-center duration-100 ease-in hover:bg-blue-200">
-            <Link to="/test" className="block py-3">
-              test
+            <Link to="/box-shadow-generator" className="block py-3">
+              Box Shadow
             </Link>
           </li>
         </ul>
       </aside>
       <section className="col-span-9 flex h-[87vh]">
-        <Routes>
-          <Route path="/" element={<FlatUiColor />} />
-          <Route path="/flat-ui-color" element={<FlatUiColor />} />
-        </Routes>
+        <MainSection />
         <ToolsSidebar />
       </section>
       <Footer />

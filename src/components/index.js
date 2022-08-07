@@ -7,6 +7,8 @@ import Footer from "./Footer";
 import BlobContainer from "./BlobContainer";
 import Blob from "./Blob";
 import BlobSettingsSection from "./BlobSettingsSection";
+import BoxShadow from "./BoxShadow/BoxShadow";
+import BoxShadowTools from "./BoxShadow/BoxShadowTools";
 
 // Export components that we import to this index file
 export {
@@ -18,4 +20,6 @@ export {
   BlobContainer,
   Blob,
   BlobSettingsSection,
+  BoxShadow,
+  BoxShadowTools,
 };

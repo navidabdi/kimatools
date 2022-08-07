@@ -1,7 +1,17 @@
+import FlatUiColor from "./FlatUiColor/FlatUiColor";
+import BoxShadow from "./BoxShadow/BoxShadow";
+
+import { Routes, Route } from "react-router-dom";
 const MainSection = () => {
   return (
     <>
-      <section className="col-span-7 p-10"></section>
+      <section className="min-w-[83%]">
+        <Routes>
+          <Route path="/" element={<FlatUiColor />} />
+          <Route path="/flat-ui-color" element={<FlatUiColor />} />
+          <Route path="/box-shadow-generator" element={<BoxShadow />} />
+        </Routes>
+      </section>
     </>
   );
 };
