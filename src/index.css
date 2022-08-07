@@ -53,7 +53,7 @@ html {
   overflow: hidden;
 }
 body {
-  font-family: "iranYekan", sans-serif;
+  font-family: "Barlow", "iranYekan", sans-serif;
   font-weight: 300;
   min-height: 100vh;
   background: var(--white-color);

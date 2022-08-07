@@ -12,7 +12,7 @@ const CopyColor = ({ copyTheColor }) => {
       style={{ backgroundColor: copyTheColor, opacity: opacityVal }}
     >
       <div className="data" style={{ transform: scaleVal }}>
-        <h2 style={{ textShadow: `2px 2px ${copyTheColor}` }}>کپی شد!</h2>
+        <h2 style={{ textShadow: `2px 2px ${copyTheColor}` }}>Coped!</h2>
         <p>{copyTheColor}</p>
       </div>
     </div>

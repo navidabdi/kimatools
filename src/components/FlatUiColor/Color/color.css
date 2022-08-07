@@ -16,7 +16,7 @@
   text-transform: uppercase;
 }
 .color::before {
-  content: "کپی";
+  content: "Copy";
   position: absolute;
   color: #fff;
   font-weight: 500;
@@ -29,7 +29,6 @@
   transform: translate(-50%, 200%);
   opacity: 0;
   transition: all 150ms ease-in-out;
-  font-family: "iranYekan", sans-serif;
 }
 .color:hover::before {
   transform: translate(-50%, -50%);
