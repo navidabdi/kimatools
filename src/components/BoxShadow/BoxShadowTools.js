@@ -1,20 +1,26 @@
-import { useState } from "react";
 import { RangeInput } from "../Controlers";
+import {
+  minWidthAtom,
+  maxWidthAtom,
+  rangeWidthAtom,
+  valueWidthAtom,
+} from "../../atoms/BoxShadowAtom";
+import { useRecoilState } from "recoil";
 
 const BoxShadowTools = () => {
-  const [minWith, setMinWith] = useState(100);
-  const [maxWith, setMaxWith] = useState(450);
-  const [rangeWith, setRangeWith] = useState(1);
+  const [minWidth] = useRecoilState(minWidthAtom);
+  const [maxWidth] = useRecoilState(maxWidthAtom);
+  const [rangeWidth] = useRecoilState(rangeWidthAtom);
+  const [valueWidth, setValueWidth] = useRecoilState(valueWidthAtom);
 
   return (
     <div className="px-5 py-5">
       <RangeInput
-        min={minWith}
-        setMin={setMinWith}
-        max={maxWith}
-        setMax={setMaxWith}
-        range={rangeWith}
-        setRange={setRangeWith}
+        min={minWidth}
+        max={maxWidth}
+        range={rangeWidth}
+        value={valueWidth}
+        setValue={setValueWidth}
         title="width"
       />
     </div>

@@ -1,12 +1,20 @@
 import "./rangeInput.css";
 
-const RangeInput = ({ min, max, range, setMin, setMax, setRange, title }) => {
+const RangeInput = ({ min, max, range, value, setValue, title }) => {
   return (
     <div>
       <label htmlFor="default-range" className="block">
         {title}
       </label>
-      <input id="default-range" type="range" className="w-full" />
+      <input
+        min={min}
+        max={max}
+        range={range}
+        onChange={(e) => setValue(e.target.value)}
+        value={value}
+        type="range"
+        className="w-full"
+      />
     </div>
   );
 };
