@@ -64,4 +64,6 @@ body {
   .hover-link {
     @apply py-3 px-4 cursor-pointer hover:bg-blue-50 transition-all;
   }
+  .input-range {
+  }
 }
