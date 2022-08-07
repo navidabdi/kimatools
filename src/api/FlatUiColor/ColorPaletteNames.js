@@ -1,62 +1,77 @@
 export const ColorPaletteNames = [
   {
     id: 0,
-    name: 'پالت ایران',
+    persianName: "پالت ایران",
+    englishName: "Iranian Palette",
   },
   {
     id: 1,
-    name: 'پالت اصلی',
+    persianName: "پالت اصلی",
+    englishName: "Main Palette",
   },
   {
     id: 2,
-    name: 'پالت آمریکا',
+    persianName: "پالت آمریکا",
+    englishName: "American Palette",
   },
   {
     id: 3,
-    name: 'پالت استرالیا',
+    persianName: "پالت استرالیا",
+    englishName: "Aussie Palette",
   },
   {
     id: 4,
-    name: 'پالت انگلیس',
+    persianName: "پالت انگلیس",
+    englishName: "British Palette",
   },
   {
     id: 5,
-    name: 'پالت کانادا',
+    persianName: "پالت کانادا",
+    englishName: "Canadian Palette",
   },
   {
     id: 6,
-    name: 'پالت چین',
+    persianName: "پالت چین",
+    englishName: "Chinese Palette",
   },
   {
     id: 7,
-    name: 'پالت هلند',
+    persianName: "پالت هلند",
+    englishName: "Dutch Palette",
   },
   {
     id: 8,
-    name: 'پالت فرانسه',
+    persianName: "پالت فرانسه",
+    englishName: "French Palette",
   },
   {
     id: 9,
-    name: 'پالت آلمان',
+    persianName: "پالت آلمان",
+    englishName: "German Palette",
   },
   {
     id: 10,
-    name: 'پالت هند',
+    persianName: "پالت هند",
+    englishName: "Indian Palette",
   },
   {
     id: 11,
-    name: 'پالت روسیه',
+    persianName: "پالت روسیه",
+    englishName: "Russian Palette",
   },
   {
     id: 12,
-    name: 'پالت اسپانیا',
+    persianName: "پالت اسپانیا",
+    englishName: "Spanish Palette",
   },
   {
     id: 13,
-    name: 'پالت سوئد',
+    persianName: "پالت سوئد",
+    englishName: "Swedish Palette",
   },
   {
     id: 14,
-    name: 'پالت ترکیه',
+    persianName: "پالت ترکیه",
+    englishName: "Turkish Palette",
   },
 ];
