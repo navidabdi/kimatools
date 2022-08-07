@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react';
-import * as Patterns from '../utils/patterns';
-import LoadingImg from '../img/loadingimg.png';
+import React, { useRef, useState } from "react";
+import * as Patterns from "../utils/patterns";
+import LoadingImg from "../assets/img/loadingimg.png";
 
 const Blob = ({
   size,
@@ -19,16 +19,16 @@ const Blob = ({
   const props = {
     fill: color,
   };
-  if (type === 'gradient') {
-    props.fill = 'url(#gradient)';
+  if (type === "gradient") {
+    props.fill = "url(#gradient)";
   }
   if (isOutline) {
-    props.strokeWidth = '7px';
-    props.fill = 'none';
+    props.strokeWidth = "7px";
+    props.fill = "none";
     props.stroke = color;
   }
-  if (type === 'gradient' && isOutline) {
-    props.stroke = 'url(#gradient)';
+  if (type === "gradient" && isOutline) {
+    props.stroke = "url(#gradient)";
   }
   if (!svgPath) {
     return <p>Is loading</p>;
@@ -43,8 +43,8 @@ const Blob = ({
       id="blobSvg"
       ref={ref}
     >
-      {type === 'solid' && <path id="blob" d={svgPath} {...props} />}
-      {type === 'gradient' && (
+      {type === "solid" && <path id="blob" d={svgPath} {...props} />}
+      {type === "gradient" && (
         <>
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -55,7 +55,7 @@ const Blob = ({
           <path id="blob" d={svgPath} {...props} />
         </>
       )}
-      {type === 'pattern' && (
+      {type === "pattern" && (
         <>
           <defs>
             <pattern
@@ -74,7 +74,7 @@ const Blob = ({
         </>
       )}
 
-      {type === 'image' && (
+      {type === "image" && (
         <>
           <defs>
             <clipPath id="shape">

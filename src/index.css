@@ -1,8 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700;900&display=swap');
 
 * {
   margin: 0;
@@ -24,12 +23,7 @@
   --l-border-raduis: 20px;
   --xl-border-raduis: 25px;
   --xxl-border-raduis: 30px;
-
   --bg-transition-hover: background 0.15s ease-in;
-}
-
-a {
-  text-decoration: none;
 }
 
 ul {
@@ -42,10 +36,46 @@ img {
   height: auto;
 }
 
+@font-face {
+  font-family: iranYekan;
+  src: url(./assets/fonts/iranyekanwebregularfanum.woff);
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  color: var(--primary-color);
+  display: block;
+  overflow: hidden;
+}
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-color);
+  right: 0;
+  bottom: 0;
+  transform: translateX(100%);
+  transition: transform 0.2s ease-in-out;
+}
+a:hover::after {
+  transform: translateX(0);
+}
+
+html {
+  overflow: hidden;
+}
 body {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol';
+  font-family: "iranYekan", sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
   background: var(--white-color);
   color: var(--body-color);
+}
+
+@layer components {
+  .hover-link {
+    @apply py-3 px-4 cursor-pointer hover:bg-blue-50 transition-all;
+  }
 }

@@ -1,0 +1,7 @@
+.color-container {
+  direction: rtl;
+  display: grid;
+  grid-template-rows: repeat(4, 22vh);
+  grid-template-columns: repeat(5, 1fr);
+  transition: all 0.5s ease-in-out;
+}
