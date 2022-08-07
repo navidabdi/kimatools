@@ -14,8 +14,8 @@ const App = () => {
     <div className="grid overflow-hidden grid-cols-10 grid-rows-1">
       <Header />
       <MenuSidebar />
-      <BlobContainer />
-      <BlobSettingsSection />
+      <MainSection />
+      <ToolsSidebar />
     </div>
   );
 };

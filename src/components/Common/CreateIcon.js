@@ -1,103 +1,83 @@
 import React from 'react';
 import { Icon } from '@chakra-ui/react';
-import { createIcon } from '@chakra-ui/icons';
 
-export const FlutterIcon = createIcon({
-  displayName: 'FlutterIcon',
-  viewBox: '0 0 24 24',
-  path: [
-    <path fill="none" d="M0 0h24v24H0z" />,
+const FlutterIcon = (props) => (
+  <Icon viewBox="0 0 24 24" {...props}>
+    <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M13.503 2.001l-10 10 3.083 3.083 13.08-13.083h-6.163zm-.006 9.198L8.122 16.62 13.494 22h6.189l-5.387-5.4 5.389-5.4h-6.188z"
       fill="currentColor"
-    />,
-  ],
-});
+    />
+  </Icon>
+);
 
-export const RightArrowIcon = createIcon({
-  displayName: 'RightArrowIcon',
-  viewBox: '0 0 24 24',
-  path: [
-    <path fill="none" d="M0 0h24v24H0z" />,
+const RightArrowIcon = (props) => (
+  <Icon viewBox="0 0 24 24" {...props}>
+    <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"
       fill="currentColor"
-    />,
-  ],
-});
+    />
+  </Icon>
+);
 
-export const HtmlIcon = createIcon({
-  displayName: 'HtmlIcon',
-  viewBox: '0 0 24 24',
-  path: [
-    <path fill="none" d="M0 0h24v24H0z" />,
+const HtmlIcon = (props) => (
+  <Icon viewBox="0 0 24 24" {...props}>
+    <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
       fill="currentColor"
-    />,
-  ],
-});
-
-export const HoriIcon = createIcon({
-  displayName: 'HoriIcon',
-  viewBox: '0 0 24 24',
-  path: [
-    <path fill="none" d="M0 0h24v24H0z" />,
+    />
+  </Icon>
+);
+const HoriIcon = (props) => (
+  <Icon viewBox="0 0 24 24" {...props}>
+    <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M23 12l-7.071 7.071-1.414-1.414L20.172 12l-5.657-5.657 1.414-1.414L23 12zM3.828 12l5.657 5.657-1.414 1.414L1 12l7.071-7.071 1.414 1.414L3.828 12z"
       fill="currentColor"
       stroke="3"
-    />,
-  ],
-});
-
-export const InfoIcon = createIcon({
-  displayName: 'InfoIcon',
-  viewBox: '0 0 24 24',
-  path: [
-    <path fill="none" d="M0 0h24v24H0z" />,
+    />
+  </Icon>
+);
+const InfoIcon = (props) => (
+  <Icon viewBox="0 0 24 24" {...props}>
+    <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"
       fill="currentColor"
-    />,
-  ],
-});
+    />
+  </Icon>
+);
 
-export const QuestionIcon = createIcon({
-  displayName: 'QuestionIcon',
-  viewBox: '0 0 24 24',
-  path: [
-    <path fill="none" d="M0 0h24v24H0z" />,
+const QuestionIcon = (props) => (
+  <Icon viewBox="0 0 24 24" {...props}>
+    <path fill="none" d="M0 0H24V24H0z" />
     <path
       d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm2-1.645V14h-2v-1.5a1 1 0 0 1 1-1 1.5 1.5 0 1 0-1.471-1.794l-1.962-.393A3.501 3.501 0 1 1 13 13.355z"
       fill="currentColor"
-    />,
-  ],
-});
-
-export const DownloadIcon = createIcon({
-  displayName: 'DownloadIcon',
-  viewBox: '0 0 24 24',
-  path: [
-    <path fill="none" d="M0 0h24v24H0z" />,
+    />
+  </Icon>
+);
+const DownloadIcon = (props) => (
+  <Icon viewBox="0 0 24 24" {...props}>
+    <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M3 19h18v2H3v-2zm10-5.828L19.071 7.1l1.414 1.414L12 17 3.515 8.515 4.929 7.1 11 13.17V2h2v11.172z"
       fill="currentColor"
-    />,
-  ],
-});
+    />
+  </Icon>
+);
 
-export const CopyIcon = createIcon({
-  displayName: 'CopyIcon',
-  viewBox: '0 0 24 24',
-  path: [
-    <path fill="none" d="M0 0h24v24H0z" />,
+const CopyIcon = (props) => (
+  <Icon viewBox="0 0 24 24" {...props}>
+    <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M7 6V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7zm2 0h8v10h2V4H9v2z"
       fill="currentColor"
-    />,
-  ],
-});
+    />
+  </Icon>
+);
 
 const TrashIcon = (props) => (
   <Icon viewBox="0 0 24 24" {...props}>
@@ -179,65 +159,55 @@ const SoundOffIcon = (props) => (
   </Icon>
 );
 
-export const PaintIcon = createIcon({
-  displayName: 'PaintIcon',
-  viewBox: '0 0 24 24',
-  path: [
-    <path fill="none" d="M0 0h24v24H0z" />,
+const PaintIcon = (props) => (
+  <Icon viewBox="0 0 24 24" {...props}>
+    <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M19.228 18.732l1.768-1.768 1.767 1.768a2.5 2.5 0 1 1-3.535 0zM8.878 1.08l11.314 11.313a1 1 0 0 1 0 1.415l-8.485 8.485a1 1 0 0 1-1.414 0l-8.485-8.485a1 1 0 0 1 0-1.415l7.778-7.778-2.122-2.121L8.88 1.08zM11 6.03L3.929 13.1H18.07L11 6.03z"
       fill="currentColor"
-    />,
-  ],
-});
+    />
+  </Icon>
+);
 
-export const PaletteIcon = createIcon({
-  displayName: 'PaletteIcon',
-  viewBox: '0 0 24 24',
-  path: [
-    <path fill="none" d="M0 0h24v24H0z" />,
+const PaletteIcon = (props) => (
+  <Icon viewBox="0 0 24 24" {...props}>
+    <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M12 2c5.522 0 10 3.978 10 8.889a5.558 5.558 0 0 1-5.556 5.555h-1.966c-.922 0-1.667.745-1.667 1.667 0 .422.167.811.422 1.1.267.3.434.689.434 1.122C13.667 21.256 12.9 22 12 22 6.478 22 2 17.522 2 12S6.478 2 12 2zm-1.189 16.111a3.664 3.664 0 0 1 3.667-3.667h1.966A3.558 3.558 0 0 0 20 10.89C20 7.139 16.468 4 12 4a8 8 0 0 0-.676 15.972 3.648 3.648 0 0 1-.513-1.86zM7.5 12a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm9 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM12 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
       fill="currentColor"
-    />,
-  ],
-});
+    />
+  </Icon>
+);
 
-export const PatternIcon = createIcon({
-  displayName: 'PatternIcon',
-  viewBox: '0 0 24 24',
-  path: [
-    <path fill="none" d="M0 0h24v24H0z" />,
+const PatternIcon = (props) => (
+  <Icon viewBox="0 0 24 24" {...props}>
+    <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M5 7h2v10H5V7zm-4 3h2v4H1v-4zm8-8h2v18H9V2zm4 2h2v18h-2V4zm4 3h2v10h-2V7zm4 3h2v4h-2v-4z"
       fill="currentColor"
-    />,
-  ],
-});
+    />
+  </Icon>
+);
 
-export const ImageIcon = createIcon({
-  displayName: 'ImageIcon',
-  viewBox: '0 0 24 24',
-  path: [
-    <path fill="none" d="M0 0h24v24H0z" />,
+const ImageIcon = (props) => (
+  <Icon viewBox="0 0 24 24" {...props}>
+    <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M4.828 21l-.02.02-.021-.02H2.992A.993.993 0 0 1 2 20.007V3.993A1 1 0 0 1 2.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H4.828zM20 15V5H4v14L14 9l6 6zm0 2.828l-6-6L6.828 19H20v-1.172zM8 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
       fill="currentColor"
-    />,
-  ],
-});
+    />
+  </Icon>
+);
 
-export const LandscapeIcon = createIcon({
-  displayName: 'LandscapeIcon',
-  viewBox: '0 0 24 24',
-  path: [
-    <path fill="none" d="M0 0h24v24H0z" />,
+const LandscapeIcon = (props) => (
+  <Icon viewBox="0 0 24 24" {...props}>
+    <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M16 21l-4.762-8.73L15 6l8 15h-7zM8 10l6 11H2l6-11zM5.5 8a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"
       fill="currentColor"
-    />,
-  ],
-});
+    />
+  </Icon>
+);
 
 const BookmarkIcon = (props) => (
   <Icon viewBox="0 0 24 24" {...props}>
@@ -316,31 +286,31 @@ const LoIcon = () => (
   </Icon>
 );
 
-// export {
-//   RightArrowIcon,
-//   FlutterIcon,
-//   HtmlIcon,
-//   HoriIcon,
-//   InfoIcon,
-//   DownloadIcon,
-//   CopyIcon,
-//   LoIcon,
-//   TrashIcon,
-//   QuestionIcon,
-//   SoundIcon,
-//   SoundOffIcon,
-//   GithubIcon,
-//   CopyrightIcon,
-//   UserIcon,
-//   CreditsIcon,
-//   PaintIcon,
-//   PaletteIcon,
-//   PatternIcon,
-//   OutlineIcon,
-//   ImageIcon,
-//   LandscapeIcon,
-//   SavedIcon,
-//   TwitterIcon,
-//   BookmarkIcon,
-//   NpmIcon,
-// };
+export {
+  RightArrowIcon,
+  FlutterIcon,
+  HtmlIcon,
+  HoriIcon,
+  InfoIcon,
+  DownloadIcon,
+  CopyIcon,
+  LoIcon,
+  TrashIcon,
+  QuestionIcon,
+  SoundIcon,
+  SoundOffIcon,
+  GithubIcon,
+  CopyrightIcon,
+  UserIcon,
+  CreditsIcon,
+  PaintIcon,
+  PaletteIcon,
+  PatternIcon,
+  OutlineIcon,
+  ImageIcon,
+  LandscapeIcon,
+  SavedIcon,
+  TwitterIcon,
+  BookmarkIcon,
+  NpmIcon,
+};

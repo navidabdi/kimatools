@@ -14,6 +14,7 @@ const Ding = ({ isSelected, activeComp, label, Icon, ...props }) => (
   >
     <Flex direction="column" align="center">
       {/* <Icon fontSize="2xl" color="gray.600" _dark={{ color: 'gray.300' }} /> */}
+
       <Text fontSize="sm" fontWeight="normal" variant="subtle" mt="2">
         {label}
       </Text>
