@@ -10,3 +10,8 @@ export const valueHeightAtom = atom({
   key: "valueHeightAtom",
   default: 450,
 });
+// Border radius Atoms
+export const borderRadiustAtom = atom({
+  key: "borderRadiustAtom",
+  default: 50,
+});

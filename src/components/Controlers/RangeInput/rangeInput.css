@@ -1,3 +1,17 @@
+.input-range {
+  cursor: pointer;
+}
+.input-range::after {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 2px;
+  background-color: rgba(0, 4, 255, 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 input[type="range"] {
   color: var(--primary-color);
   --thumb-height: 1.125em;
@@ -11,6 +25,7 @@ input[type="range"] {
   position: relative;
   background: #fff0;
   overflow: hidden;
+  transition: all 0.3s;
 }
 input[type="range"],
 input[type="range"]::-webkit-slider-runnable-track,
@@ -63,11 +78,11 @@ input[type="range"]::-webkit-slider-thumb {
   );
 }
 
-input[type="range"]:hover::-webkit-slider-thumb {
+/* input[type="range"]:hover::-webkit-slider-thumb {
   filter: brightness(var(--brightness-hover));
   cursor: -webkit-grab;
   cursor: grab;
-}
+} */
 
 input[type="range"]:active::-webkit-slider-thumb {
   filter: brightness(var(--brightness-down));
