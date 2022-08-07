@@ -1,9 +1,12 @@
-// import BlobSettingsSection from './BlobSettingsSection';
-
+import FlatUiTools from "../components/FlatUiColor/FlatUiTools";
+import { Routes, Route } from "react-router-dom";
 const ToolsSidebar = () => {
   return (
-    <aside className="col-span-2 bg-blue-50">
-      {/* <BlobSettingsSection /> */}
+    <aside className="min-w-[17%]">
+      <Routes>
+        <Route path="/" element={<FlatUiTools />} />
+        <Route path="/flat-ui-color" element={<FlatUiTools />} />
+      </Routes>
     </aside>
   );
 };

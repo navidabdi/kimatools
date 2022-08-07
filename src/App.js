@@ -1,5 +1,5 @@
 // Import components
-import { Header, Footer } from "./components";
+import { Header, Footer, ToolsSidebar } from "./components";
 import FlatUiColor from "./components/FlatUiColor/FlatUiColor";
 import { Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -26,6 +26,7 @@ const App = () => {
           <Route path="/" element={<FlatUiColor />} />
           <Route path="/flat-ui-color" element={<FlatUiColor />} />
         </Routes>
+        <ToolsSidebar />
       </section>
       <Footer />
     </div>

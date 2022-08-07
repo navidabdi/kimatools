@@ -5,7 +5,7 @@ import sound from "../../assets/audio/audio.m4a";
 
 import CopyColor from "./CopyColor/CopyColor";
 import Color from "./Color/Color";
-import SidebarTools from "./SidebarTools/SidebarTools";
+import FlatUiTools from "./FlatUiTools";
 
 import {
   colorPaletteSelector,
@@ -38,7 +38,6 @@ const FlatUiColor = () => {
           setCopyTriger={setCopyTriger}
         />
       </div>
-      <SidebarTools />
       {/* <audio className="sound-pick" src="./assets/audio.m4a"></audio> */}
     </>
   );

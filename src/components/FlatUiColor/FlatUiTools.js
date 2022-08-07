@@ -1,15 +1,15 @@
 import React from "react";
 import { useRecoilState } from "recoil";
-import { chooseColorPaletteAtom } from "../../../atoms/FlatUiColor";
-import { ColorPaletteNames } from "../../../api/FlatUiColor";
+import { chooseColorPaletteAtom } from "../../atoms/FlatUiColor";
+import { ColorPaletteNames } from "../../api/FlatUiColor";
 
-const Header = () => {
+const FlatUiTools = () => {
   const [chooseColorPalette, setChooseColorPalette] = useRecoilState(
     chooseColorPaletteAtom,
   );
 
   return (
-    <nav className="min-w-[17%] ">
+    <nav>
       <ul>
         {ColorPaletteNames.map((palette) => (
           <li
@@ -31,4 +31,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default FlatUiTools;
