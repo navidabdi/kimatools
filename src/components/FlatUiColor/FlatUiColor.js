@@ -23,24 +23,22 @@ const FlatUiColor = () => {
   };
   return (
     <>
-      <section className="col-span-9 flex flex-grow">
-        <div className="color-container min-w-[80%]">
-          {chooseColorPalette.map((color) => (
-            <Color
-              key={color.id}
-              color={color}
-              setCopyTheColor={setCopyTheColor}
-              playSound={playSound}
-            />
-          ))}
-          <CopyColor
-            copyTheColor={copyTheColor}
-            copyTriger={copyTriger}
-            setCopyTriger={setCopyTriger}
+      <div className="color-container min-w-[83%]">
+        {chooseColorPalette.map((color) => (
+          <Color
+            key={color.id}
+            color={color}
+            setCopyTheColor={setCopyTheColor}
+            playSound={playSound}
           />
-        </div>
-        <SidebarTools />
-      </section>
+        ))}
+        <CopyColor
+          copyTheColor={copyTheColor}
+          copyTriger={copyTriger}
+          setCopyTriger={setCopyTriger}
+        />
+      </div>
+      <SidebarTools />
       {/* <audio className="sound-pick" src="./assets/audio.m4a"></audio> */}
     </>
   );

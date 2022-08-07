@@ -9,7 +9,7 @@ const Header = () => {
   );
 
   return (
-    <nav className="text-right min-w-[20%] ">
+    <nav className="text-right min-w-[17%] ">
       <ul>
         {ColorPaletteNames.map((palette) => (
           <li

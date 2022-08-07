@@ -48,20 +48,6 @@ a {
   display: block;
   overflow: hidden;
 }
-a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: var(--primary-color);
-  right: 0;
-  bottom: 0;
-  transform: translateX(100%);
-  transition: transform 0.2s ease-in-out;
-}
-a:hover::after {
-  transform: translateX(0);
-}
 
 html {
   overflow: hidden;
