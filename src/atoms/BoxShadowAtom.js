@@ -45,3 +45,8 @@ export const mainBgShadowAtom = atom({
   key: "mainBgShadowAtom",
   default: "rgba(243, 244, 246,1)",
 });
+// Shadow Color Atoms
+export const shadowColorAtom = atom({
+  key: "shadowColorAtom",
+  default: "rgba(0, 0, 0,0.1)",
+});

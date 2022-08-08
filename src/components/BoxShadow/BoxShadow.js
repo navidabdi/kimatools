@@ -8,6 +8,7 @@ import {
   spreadRadiusAtom,
   itemBgShadowAtom,
   mainBgShadowAtom,
+  shadowColorAtom,
 } from "../../atoms/BoxShadowAtom";
 import { useRecoilState } from "recoil";
 
@@ -21,6 +22,7 @@ const BoxShadow = () => {
   const [spreadRadius] = useRecoilState(spreadRadiusAtom);
   const [colorBox] = useRecoilState(itemBgShadowAtom);
   const [colorMain] = useRecoilState(mainBgShadowAtom);
+  const [shadowColor] = useRecoilState(shadowColorAtom);
 
   return (
     <div
@@ -34,7 +36,7 @@ const BoxShadow = () => {
           height: valueHeight + "px",
           borderRadius: borderRadius + "px",
           backgroundColor: colorBox,
-          boxShadow: `${horizontalOffset}px ${verticalOffset}px ${blurRadius}px ${spreadRadius}px rgba(0,0,0,0.1)`,
+          boxShadow: `${horizontalOffset}px ${verticalOffset}px ${blurRadius}px ${spreadRadius}px ${shadowColor}`,
         }}
       ></div>
     </div>
