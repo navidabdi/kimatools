@@ -2,10 +2,10 @@ import "./rangeInput.css";
 
 const RangeInput = ({ min, max, range, value, setValue, title }) => {
   return (
-    <div className="py-5 px-4 border-b-2 border-blue-100/60">
+    <div className="py-3 px-4 border-b-2 border-blue-100/60">
       <div className="flex justify-between mb-2">
-        <p className="block">{title}</p>
-        <p>{`${value} px`}</p>
+        <p className="block text-sm">{title}</p>
+        <p className="text-sm">{`${value} px`}</p>
       </div>
       <input
         min={min}
