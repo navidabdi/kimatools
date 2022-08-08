@@ -35,3 +35,13 @@ export const spreadRadiusAtom = atom({
   key: "spreadRadiusAtom",
   default: -3,
 });
+// Item Background Atoms
+export const itemBgShadowAtom = atom({
+  key: "itemBgShadowAtom",
+  default: "rgba(255,255,255,1)",
+});
+// Item Background Atoms
+export const mainBgShadowAtom = atom({
+  key: "mainBgShadowAtom",
+  default: "rgba(243, 244, 246,1)",
+});

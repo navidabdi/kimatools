@@ -7,6 +7,8 @@ import {
   verticalOffsetAtom,
   blurRadiusAtom,
   spreadRadiusAtom,
+  itemBgShadowAtom,
+  mainBgShadowAtom,
 } from "../../atoms/BoxShadowAtom";
 import { useRecoilState } from "recoil";
 
@@ -24,7 +26,8 @@ const BoxShadowTools = () => {
     useRecoilState(verticalOffsetAtom);
   const [blurRadius, setBlurRadius] = useRecoilState(blurRadiusAtom);
   const [spreadRadius, setSpreadRadius] = useRecoilState(spreadRadiusAtom);
-  const [color, setColor] = useState("rgba(0, 255, 166, .9");
+  const [colorBox, setColorBox] = useRecoilState(itemBgShadowAtom);
+  const [colorMain, setColorMain] = useRecoilState(mainBgShadowAtom);
 
   const presetColors = [
     "rgba(154, 205, 50,0.9)",
@@ -98,9 +101,13 @@ const BoxShadowTools = () => {
         setValue={setSpreadRadius}
       />
       <ColorPicker
-        color={color}
-        setColor={setColor}
-        onChange={setColor}
+        color={colorBox}
+        setColor={setColorBox}
+        presetColors={presetColors}
+      />
+      <ColorPicker
+        color={colorMain}
+        setColor={setColorMain}
         presetColors={presetColors}
       />
     </div>

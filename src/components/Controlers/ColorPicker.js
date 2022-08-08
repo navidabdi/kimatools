@@ -3,7 +3,7 @@ import { RgbaStringColorPicker } from "react-colorful";
 
 import useClickOutside from "../../utils/useClickOutside";
 
-const ColorPicker = ({ color, setColor, presetColors, onChange }) => {
+const ColorPicker = ({ color, setColor, presetColors }) => {
   const popover = useRef();
   const [isOpen, toggle] = useState(false);
 
@@ -20,7 +20,7 @@ const ColorPicker = ({ color, setColor, presetColors, onChange }) => {
 
       {isOpen && (
         <div className="popover" ref={popover}>
-          <RgbaStringColorPicker color={color} onChange={onChange} />
+          <RgbaStringColorPicker color={color} onChange={setColor} />
           <div className="color-palette p-3 grid overflow-hidden grid-cols-6 auto-rows-fr gap-2">
             {presetColors.map((color, index) => (
               <button
