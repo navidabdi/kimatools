@@ -1,6 +1,6 @@
 const MenuSidebar = () => {
   return (
-    <aside className="col-span-1 bg-blue-50">
+    <aside className="col-span-1 bg-white">
       <ul className="">
         <li className="text-center duration-100 ease-in hover:bg-blue-200">
           <a href="#" className="block py-3">

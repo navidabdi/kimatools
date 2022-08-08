@@ -2,7 +2,7 @@ import logo from "../assets/img/logo.png";
 
 const Header = () => {
   return (
-    <header className="col-start-1 col-end-11 px-6 bg-blue-100/75 h-[8vh]">
+    <header className="col-start-1 col-end-11 px-6 bg-white border-b border-indigo-100 h-[8vh]">
       <div className="flex justify-between items-center h-full">
         <h1 className="font-bold text-lg leading-[0]">WEBKIMA TOOLS</h1>
         <a
