@@ -68,9 +68,28 @@ body {
   }
 }
 
-.accordion {
-  transition: opacity 0.1s 0.5s ease, transform 0.5s ease-in-out,
-    margin 0.5s ease-in-out;
+.accordion-content {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, margin 0.5s ease-in-out;
+}
+.accordion-content.active {
+  opacity: 1;
+  pointer-events: auto;
+  margin-top: 0;
+  transition: opacity 0.5s 0.3s ease, margin 0.3s ease-in-out;
+  animation: dpe 0.5s;
+}
+@keyframes dpe {
+  0% {
+    pointer-events: none;
+  }
+  50% {
+    pointer-events: none;
+  }
+  100% {
+    pointer-events: auto;
+  }
 }
 
 .picker {
