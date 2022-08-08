@@ -17,9 +17,9 @@ const FlatUiTools = () => {
               setChooseColorPalette(palette.id);
             }}
             key={palette.id}
-            className={` py-3 px-10 cursor-pointer hover:bg-blue-50 transition-all ${
+            className={` py-3 px-10 dark-text-primary bg-hover hover:text-white ${
               palette.id === chooseColorPalette
-                ? " bg-blue-600 text-white hover:text-inherit"
+                ? " bg-indigo-600 text-white dark:text-white"
                 : ""
             }`}
           >

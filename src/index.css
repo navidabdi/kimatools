@@ -32,9 +32,25 @@ body {
     "Segoe UI Symbol";
   font-weight: 400;
   min-height: 100vh;
+  transition: all 0.5s ease;
 }
 
 @layer components {
+  .bg-primary {
+    @apply bg-white;
+  }
+  .bg-secondery {
+    @apply bg-indigo-50;
+  }
+  .bg-third {
+    @apply bg-indigo-100;
+  }
+  .bg-hover {
+    @apply cursor-pointer transition-all hover:bg-indigo-500 hover:text-white;
+  }
+  .border-primary {
+    @apply border-indigo-100;
+  }
   .dark-bg-primary {
     @apply dark:bg-neutral-900;
   }
@@ -61,6 +77,9 @@ body {
   }
   .dark-text-indigo {
     @apply dark:text-indigo-400;
+  }
+  input[type="range"] {
+    @apply text-indigo-500 dark:text-slate-400;
   }
 }
 
@@ -114,15 +133,18 @@ body {
   content: "";
   position: absolute;
   height: 25px;
-  width: 2px;
+  width: 3px;
+  border-radius: 5px;
   background-color: rgba(0, 4, 255, 0.2);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.dark .input-range::after {
+  background-color: rgba(255, 255, 255, 0.2);
+}
 
 input[type="range"] {
-  color: var(--primary-color);
   --thumb-height: 1.7em;
   --track-height: 0.18em;
   --track-color: rgba(0, 0, 0, 0.2);
@@ -130,6 +152,9 @@ input[type="range"] {
   --brightness-down: 80%;
   --clip-edges: 0em;
   --thumb-width: 0.6em;
+}
+.dark input[type="range"] {
+  --track-color: rgba(255, 255, 255, 0.2);
 }
 input[type="range"] {
   position: relative;

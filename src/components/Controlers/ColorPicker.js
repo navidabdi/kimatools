@@ -12,7 +12,7 @@ const ColorPicker = ({ title, color, setColor, presetColors }) => {
 
   return (
     <div className="picker py-2 first:pt-0">
-      <h4 className="mb-1">{title}</h4>
+      <h4 className="mb-1 dark-text-primary">{title}</h4>
       <div className="flex items-center justify-between">
         <div
           className="swatch w-8 h-8 rounded-md cursor-pointer"
