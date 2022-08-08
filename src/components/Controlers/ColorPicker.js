@@ -12,11 +12,20 @@ const ColorPicker = ({ color, setColor, presetColors }) => {
 
   return (
     <div className="picker">
-      <div
-        className="swatch"
-        style={{ backgroundColor: color }}
-        onClick={() => toggle(true)}
-      />
+      <div className="flex justify-between">
+        <div
+          className="swatch"
+          style={{ backgroundColor: color }}
+          onClick={() => toggle(true)}
+        />
+        <input
+          type="text"
+          value={color}
+          defaultValue={color}
+          onChange={(e) => setColor(e.target.value)}
+          className=""
+        />
+      </div>
 
       {isOpen && (
         <div className="popover" ref={popover}>

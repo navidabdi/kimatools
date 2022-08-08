@@ -4,9 +4,7 @@ import ToolsSidebar from "./ToolsSidebar";
 import MainSection from "./MainSection";
 import Header from "./Header";
 import Footer from "./Footer";
-import BlobContainer from "./BlobContainer";
-import Blob from "./Blob";
-import BlobSettingsSection from "./BlobSettingsSection";
+
 import BoxShadow from "./BoxShadow/BoxShadow";
 import BoxShadowTools from "./BoxShadow/BoxShadowTools";
 
@@ -17,9 +15,6 @@ export {
   MainSection,
   Header,
   Footer,
-  BlobContainer,
-  Blob,
-  BlobSettingsSection,
   BoxShadow,
   BoxShadowTools,
 };

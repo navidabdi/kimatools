@@ -1,0 +1,15 @@
+.accordion {
+  cursor: pointer;
+  width: auto;
+}
+
+.title h4 {
+}
+
+.accordion .content {
+  display: none;
+}
+
+.accordion.open .content {
+  display: block;
+}

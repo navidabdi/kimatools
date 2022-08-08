@@ -14,8 +14,7 @@ import { useRecoilState } from "recoil";
 
 import React, { useState } from "react";
 import ColorPicker from "../Controlers/ColorPicker";
-// import { HsvaColor, ColorResult } from '@uiw/color-convert';
-
+import { Accordion } from "../../Layouts";
 const BoxShadowTools = () => {
   const [valueWidth, setValueWidth] = useRecoilState(valueWidthAtom);
   const [valueHeigh, setValueHeigh] = useRecoilState(valueHeightAtom);
@@ -100,7 +99,17 @@ const BoxShadowTools = () => {
         value={spreadRadius}
         setValue={setSpreadRadius}
       />
-      <ColorPicker
+      <Accordion
+        title="colors"
+        content={
+          <ColorPicker
+            color={colorBox}
+            setColor={setColorBox}
+            presetColors={presetColors}
+          />
+        }
+      />
+      {/* <ColorPicker
         color={colorBox}
         setColor={setColorBox}
         presetColors={presetColors}
@@ -109,7 +118,7 @@ const BoxShadowTools = () => {
         color={colorMain}
         setColor={setColorMain}
         presetColors={presetColors}
-      />
+      /> */}
     </div>
   );
 };
