@@ -12,7 +12,9 @@ const RangeInput = ({ min, max, range, value, setValue, title }) => {
           onClick={() => {
             if (value > min) setValue(+value - range);
           }}
-          className="text-2xl bg-blue-500 h-7 text-white w-10 items-center justify-center flex rounded-full"
+          className={`${
+            value == min ? "bg-gray-500" : "bg-blue-500"
+          } text-2xl  h-7 text-white w-10 items-center justify-center flex rounded-full`}
         >
           <MinusIcon className="w-4 h-4" />
         </button>
@@ -29,7 +31,9 @@ const RangeInput = ({ min, max, range, value, setValue, title }) => {
           onClick={() => {
             if (value < max) setValue(+value + range);
           }}
-          className="text-2xl bg-blue-500 h-7 text-white w-10 items-center justify-center flex rounded-full"
+          className={`${
+            value == max ? "bg-gray-500" : "bg-blue-500"
+          } text-2xl  h-7 text-white w-10 items-center justify-center flex rounded-full`}
         >
           <PlusIcon className="w-4 h-4" />
         </button>
