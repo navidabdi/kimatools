@@ -3,7 +3,7 @@ import DarkSwitch from "./DarkSwitch";
 
 const Header = () => {
   return (
-    <header className="col-start-1 col-end-11 px-6 bg-white border-b border-indigo-100 h-[8vh]">
+    <header className="col-start-1 col-end-11 px-6 bg-white border-b border-indigo-100 h-[8vh] dark:bg-gray-900">
       <div className="flex justify-between items-center h-full">
         <h1 className="font-bold text-lg leading-[0]">WEBKIMA TOOLS</h1>
         <DarkSwitch />

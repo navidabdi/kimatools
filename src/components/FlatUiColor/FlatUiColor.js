@@ -5,7 +5,6 @@ import sound from "../../assets/audio/audio.m4a";
 
 import CopyColor from "./CopyColor/CopyColor";
 import Color from "./Color/Color";
-import FlatUiTools from "./FlatUiTools";
 
 import {
   colorPaletteSelector,
@@ -15,7 +14,6 @@ import {
 const FlatUiColor = () => {
   const [copyTheColor, setCopyTheColor] = useState(null);
   const [copyTriger, setCopyTriger] = useRecoilState(copyTrigerAtom);
-  const [menuTriger] = useRecoilState(menuTrigerAtom);
   const [chooseColorPalette] = useRecoilState(colorPaletteSelector);
   const playSound = () => {
     const audio = new Audio(sound);
