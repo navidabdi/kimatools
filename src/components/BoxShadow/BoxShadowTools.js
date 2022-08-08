@@ -72,7 +72,23 @@ const BoxShadowTools = () => {
           />,
         ]}
       />
-
+      <Accordion
+        title="Colors"
+        content={[
+          <ColorPicker
+            title="Fill"
+            color={colorBox}
+            setColor={setColorBox}
+            presetColors={presetColors}
+          />,
+          <ColorPicker
+            title="Background"
+            color={colorMain}
+            setColor={setColorMain}
+            presetColors={presetColors}
+          />,
+        ]}
+      />
       <Accordion
         title="Shadow Var"
         content={[
@@ -107,22 +123,6 @@ const BoxShadowTools = () => {
             range={1}
             value={spreadRadius}
             setValue={setSpreadRadius}
-          />,
-        ]}
-      />
-
-      <Accordion
-        title="Colors"
-        content={[
-          <ColorPicker
-            color={colorBox}
-            setColor={setColorBox}
-            presetColors={presetColors}
-          />,
-          <ColorPicker
-            color={colorMain}
-            setColor={setColorMain}
-            presetColors={presetColors}
           />,
         ]}
       />

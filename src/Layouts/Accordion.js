@@ -1,15 +1,9 @@
-import { useEffect, useState, useRef } from "react";
-import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/react/outline";
+import { useState, useRef } from "react";
+import { ChevronUpIcon } from "@heroicons/react/outline";
 
 const Accordion = ({ title, content }) => {
   const [isActiveAccordion, setIsActiveAccordion] = useState(false);
-  const [divHeight, setDivHeight] = useState(0);
   const ref = useRef(null);
-
-  // useEffect(() => {
-  //   setDivHeight(ref.current.clientHeight);
-  //   console.log("height: ", ref.current.clientHeight);
-  // }, []);
   return (
     <div key={title} className="border-b-2 border-blue-50 accordion">
       <div
@@ -27,7 +21,7 @@ const Accordion = ({ title, content }) => {
       </div>
       <div
         ref={ref}
-        className={`accordion-content p-4
+        className={`accordion-content px-4 py-2 
           ${isActiveAccordion ? `` : "active"}
         `}
         style={

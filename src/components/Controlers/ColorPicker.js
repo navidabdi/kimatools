@@ -3,7 +3,7 @@ import { RgbaStringColorPicker } from "react-colorful";
 
 import useClickOutside from "../../utils/useClickOutside";
 
-const ColorPicker = ({ color, setColor, presetColors }) => {
+const ColorPicker = ({ title, color, setColor, presetColors }) => {
   const popover = useRef();
   const [isOpen, toggle] = useState(false);
 
@@ -11,10 +11,11 @@ const ColorPicker = ({ color, setColor, presetColors }) => {
   useClickOutside(popover, close);
 
   return (
-    <div className="picker py-2">
-      <div className="flex justify-between">
+    <div className="picker py-2 first:pt-0">
+      <h4 className="mb-1">{title}</h4>
+      <div className="flex items-center justify-between">
         <div
-          className="swatch"
+          className="swatch w-8 h-8 rounded-md cursor-pointer"
           style={{ backgroundColor: color }}
           onClick={() => toggle(true)}
         />
@@ -22,7 +23,7 @@ const ColorPicker = ({ color, setColor, presetColors }) => {
           type="text"
           value={color}
           onChange={(e) => setColor(e.target.value)}
-          className=""
+          className="bg-blue-50 h-8 rounded-md px-3 tracking-wide flex-grow ml-2"
         />
       </div>
 
