@@ -23,7 +23,7 @@ const ColorPicker = ({ title, color, setColor, presetColors }) => {
           type="text"
           value={color}
           onChange={(e) => setColor(e.target.value)}
-          className="bg-indigo-50 h-8 rounded-md px-3 tracking-wide flex-grow ml-2"
+          className="bg-indigo-50 h-8 rounded-md px-3 tracking-wide flex-grow ml-2 dark-bg-secendery dark-text-secendery"
         />
       </div>
 

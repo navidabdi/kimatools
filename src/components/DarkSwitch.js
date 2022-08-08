@@ -7,7 +7,7 @@ const DarkSwitch = () => {
   return (
     <div
       onClick={() => setDarkMode(!darkMode)}
-      className="cursor-pointer bg-indigo-50 rounded-full flex h-10 w-10 justify-center items-center"
+      className="cursor-pointer bg-indigo-50 rounded-full flex h-10 w-10 justify-center items-center dark:bg-neutral-500 dark:text-neutral-100"
     >
       {darkMode ? (
         <SunIcon className="w-7 h-7" />

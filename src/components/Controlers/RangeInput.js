@@ -3,8 +3,8 @@ const RangeInput = ({ min, max, range, value, setValue, title }) => {
   return (
     <div key={title} className="py-4 first:pt-0">
       <div className="flex justify-between mb-2">
-        <p className="block text-sm">{title}</p>
-        <p className="text-sm">{`${value} px`}</p>
+        <p className="block text-sm dark-text-primary">{title}</p>
+        <p className="text-sm dark-text-primary">{`${value} px`}</p>
       </div>
       <div className="flex items-center justify-between">
         <button
@@ -12,7 +12,9 @@ const RangeInput = ({ min, max, range, value, setValue, title }) => {
             if (value > min) setValue(+value - range);
           }}
           className={`${
-            value == min ? "bg-indigo-100" : "bg-indigo-500"
+            value == min
+              ? "bg-indigo-200 dark-bg-third"
+              : "bg-indigo-500 dark-bg-secendery"
           } text-2xl  h-7 text-white w-10 items-center justify-center flex rounded-full`}
         >
           <MinusIcon className="w-4 h-4" />
@@ -31,7 +33,9 @@ const RangeInput = ({ min, max, range, value, setValue, title }) => {
             if (value < max) setValue(+value + range);
           }}
           className={`${
-            value == max ? "bg-indigo-200" : "bg-indigo-500"
+            value == max
+              ? "bg-indigo-200 dark-bg-third"
+              : "bg-indigo-500 dark-bg-secendery"
           } text-2xl  h-7 text-white w-10 items-center justify-center flex rounded-full`}
         >
           <PlusIcon className="w-4 h-4" />
