@@ -12,7 +12,6 @@ import {
 } from "../../atoms/BoxShadowAtom";
 import { useRecoilState } from "recoil";
 
-import React, { useState } from "react";
 import ColorPicker from "../Controlers/ColorPicker";
 import { Accordion } from "../../Layouts";
 const BoxShadowTools = () => {

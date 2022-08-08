@@ -1,3 +1,3 @@
-import RangeInput from "./RangeInput/RangeInput";
-
-export { RangeInput };
+import RangeInput from "./RangeInput";
+import ColorPicker from "./ColorPicker";
+export { RangeInput, ColorPicker };
