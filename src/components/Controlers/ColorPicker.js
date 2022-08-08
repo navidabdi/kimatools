@@ -11,7 +11,7 @@ const ColorPicker = ({ color, setColor, presetColors }) => {
   useClickOutside(popover, close);
 
   return (
-    <div className="picker">
+    <div className="picker py-2">
       <div className="flex justify-between">
         <div
           className="swatch"
@@ -21,7 +21,6 @@ const ColorPicker = ({ color, setColor, presetColors }) => {
         <input
           type="text"
           value={color}
-          defaultValue={color}
           onChange={(e) => setColor(e.target.value)}
           className=""
         />

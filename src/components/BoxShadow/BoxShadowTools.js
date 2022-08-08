@@ -43,82 +43,89 @@ const BoxShadowTools = () => {
 
   return (
     <div className="">
-      <RangeInput
-        title="width"
-        min={100}
-        max={450}
-        range={1}
-        value={valueWidth}
-        setValue={setValueWidth}
-      />
-      <RangeInput
-        title="height"
-        min={100}
-        max={450}
-        range={1}
-        value={valueHeigh}
-        setValue={setValueHeigh}
-      />
-      <RangeInput
-        title="Border Radius"
-        min={0}
-        max={225}
-        range={1}
-        value={borderRadius}
-        setValue={setBorderRadius}
-      />
-      <RangeInput
-        title="Horizontal offset"
-        min={-100}
-        max={100}
-        range={1}
-        value={horizontalOffset}
-        setValue={setHorizontalOffsets}
-      />
-      <RangeInput
-        title="Vertical offset"
-        min={-100}
-        max={100}
-        range={1}
-        value={verticalOffset}
-        setValue={setVerticalOffset}
-      />
-      <RangeInput
-        title="Blur radius"
-        min={0}
-        max={100}
-        range={1}
-        value={blurRadius}
-        setValue={setBlurRadius}
-      />
-      <RangeInput
-        title="Spread radius"
-        min={-100}
-        max={100}
-        range={1}
-        value={spreadRadius}
-        setValue={setSpreadRadius}
-      />
       <Accordion
-        title="colors"
-        content={
+        title="Box Var"
+        content={[
+          <RangeInput
+            title="width"
+            min={100}
+            max={450}
+            range={1}
+            value={valueWidth}
+            setValue={setValueWidth}
+          />,
+          <RangeInput
+            title="height"
+            min={100}
+            max={450}
+            range={1}
+            value={valueHeigh}
+            setValue={setValueHeigh}
+          />,
+          <RangeInput
+            title="Border Radius"
+            min={0}
+            max={225}
+            range={1}
+            value={borderRadius}
+            setValue={setBorderRadius}
+          />,
+        ]}
+      />
+
+      <Accordion
+        title="Shadow Var"
+        content={[
+          <RangeInput
+            title="Horizontal offset"
+            min={-100}
+            max={100}
+            range={1}
+            value={horizontalOffset}
+            setValue={setHorizontalOffsets}
+          />,
+          <RangeInput
+            title="Vertical offset"
+            min={-100}
+            max={100}
+            range={1}
+            value={verticalOffset}
+            setValue={setVerticalOffset}
+          />,
+          <RangeInput
+            title="Blur radius"
+            min={0}
+            max={100}
+            range={1}
+            value={blurRadius}
+            setValue={setBlurRadius}
+          />,
+          <RangeInput
+            title="Spread radius"
+            min={-100}
+            max={100}
+            range={1}
+            value={spreadRadius}
+            setValue={setSpreadRadius}
+          />,
+        ]}
+      />
+
+      <Accordion
+        title="Colors"
+        content={[
           <ColorPicker
             color={colorBox}
             setColor={setColorBox}
             presetColors={presetColors}
-          />
-        }
+          />,
+          <ColorPicker
+            color={colorMain}
+            setColor={setColorMain}
+            presetColors={presetColors}
+          />,
+        ]}
       />
-      {/* <ColorPicker
-        color={colorBox}
-        setColor={setColorBox}
-        presetColors={presetColors}
-      />
-      <ColorPicker
-        color={colorMain}
-        setColor={setColorMain}
-        presetColors={presetColors}
-      /> */}
     </div>
   );
 };

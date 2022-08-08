@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 const MainSection = () => {
   return (
     <>
-      <section className="min-w-[83%]">
+      <section className="min-w-[78%]">
         <Routes>
           <Route path="/" element={<FlatUiColor />} />
           <Route path="/flat-ui-color" element={<FlatUiColor />} />

@@ -68,6 +68,11 @@ body {
   }
 }
 
+.accordion {
+  transition: opacity 0.1s 0.5s ease, transform 0.5s ease-in-out,
+    margin 0.5s ease-in-out;
+}
+
 .picker {
   position: relative;
 }
@@ -83,9 +88,10 @@ body {
 
 .popover {
   position: absolute;
-  bottom: calc(100% + 2px);
-  left: -50%;
+  top: calc(-200% + 2px);
+  left: 35px;
   border-radius: 9px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   background-color: #fff;
+  z-index: 9999;
 }
