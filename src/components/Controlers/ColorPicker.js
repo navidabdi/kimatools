@@ -31,7 +31,7 @@ const ColorPicker = ({ title, color, setColor, presetColors }) => {
         <div className="popover" ref={popover}>
           <RgbaStringColorPicker color={color} onChange={setColor} />
           <div className="color-palette p-3 grid overflow-hidden grid-cols-6 auto-rows-fr gap-2">
-            {presetColors.map((color, index) => (
+            {presetColors.map((color) => (
               <button
                 key={color}
                 onClick={() => setColor(color)}

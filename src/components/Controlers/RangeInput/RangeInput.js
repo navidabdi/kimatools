@@ -1,21 +1,39 @@
 import "./rangeInput.css";
-
+import { MinusIcon, PlusIcon } from "@heroicons/react/outline";
 const RangeInput = ({ min, max, range, value, setValue, title }) => {
   return (
-    <div className="py-3 first:pt-0">
+    <div key={title} className="py-3 first:pt-0">
       <div className="flex justify-between mb-2">
         <p className="block text-sm">{title}</p>
         <p className="text-sm">{`${value} px`}</p>
       </div>
-      <input
-        min={min}
-        max={max}
-        range={range}
-        onChange={(e) => setValue(e.target.value)}
-        value={value}
-        type="range"
-        className="input-range w-full"
-      />
+      <div className="flex items-center justify-between">
+        <button
+          onClick={() => {
+            if (value > min) setValue(+value - range);
+          }}
+          className="text-2xl bg-blue-500 h-7 text-white w-10 items-center justify-center flex rounded-full"
+        >
+          <MinusIcon className="w-4 h-4" />
+        </button>
+        <input
+          min={min}
+          max={max}
+          range={range}
+          onChange={(e) => setValue(e.target.value)}
+          value={value}
+          type="range"
+          className="input-range w-full mx-2"
+        />
+        <button
+          onClick={() => {
+            if (value < max) setValue(+value + range);
+          }}
+          className="text-2xl bg-blue-500 h-7 text-white w-10 items-center justify-center flex rounded-full"
+        >
+          <PlusIcon className="w-4 h-4" />
+        </button>
+      </div>
     </div>
   );
 };
