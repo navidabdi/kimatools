@@ -15,9 +15,9 @@ const RangeInput = ({ min, max, range, value, setValue, title }) => {
             value == min
               ? "bg-indigo-200 dark-bg-third"
               : "bg-indigo-500 dark-bg-secendery"
-          } text-2xl  h-7 text-white w-10 items-center justify-center flex rounded-full`}
+          } text-2xl p-2 text-white items-center justify-center flex rounded-full`}
         >
-          <MinusIcon className="w-4 h-4" />
+          <MinusIcon className="w-4" />
         </button>
         <input
           min={min}
@@ -36,9 +36,9 @@ const RangeInput = ({ min, max, range, value, setValue, title }) => {
             value == max
               ? "bg-indigo-200 dark-bg-third"
               : "bg-indigo-500 dark-bg-secendery"
-          } text-2xl  h-7 text-white w-10 items-center justify-center flex rounded-full`}
+          } text-2xl p-2 text-white items-center justify-center flex rounded-full`}
         >
-          <PlusIcon className="w-4 h-4" />
+          <PlusIcon className="w-4" />
         </button>
       </div>
     </div>

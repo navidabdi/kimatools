@@ -11,7 +11,7 @@ const ColorPicker = ({ title, color, setColor, presetColors }) => {
   useClickOutside(popover, close);
 
   return (
-    <div className="picker py-2 first:pt-0">
+    <div className="relative py-2 first:pt-0">
       <h4 className="mb-1 dark-text-primary">{title}</h4>
       <div className="flex items-center justify-between">
         <div
@@ -28,14 +28,17 @@ const ColorPicker = ({ title, color, setColor, presetColors }) => {
       </div>
 
       {isOpen && (
-        <div className="popover" ref={popover}>
+        <div
+          className="popover border-2 border-primary dark-border-primary bg-white dark-bg-primary"
+          ref={popover}
+        >
           <RgbaStringColorPicker color={color} onChange={setColor} />
-          <div className="color-palette p-3 grid overflow-hidden grid-cols-6 auto-rows-fr gap-2">
+          <div className="color-palette p-3 grid overflow-hidden grid-cols-5 auto-rows-fr">
             {presetColors.map((color) => (
               <button
                 key={color}
                 onClick={() => setColor(color)}
-                className="w-5 h-5 rounded-md cursor-pointer"
+                className="w-6 h-6 m-1 rounded-md cursor-pointer"
                 style={{ backgroundColor: color }}
               ></button>
             ))}

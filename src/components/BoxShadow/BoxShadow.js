@@ -26,7 +26,7 @@ const BoxShadow = () => {
 
   return (
     <div
-      className="bg-gray-100 min-h-full flex items-center justify-center"
+      className="bg-gray-100 min-h-full flex items-center justify-center overflow-hidden"
       style={{ backgroundColor: colorMain }}
     >
       <div
