@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="col-start-1 col-end-11 p-4 border-t border-indigo-50 h-[5vh] dark-border-primary dark-bg-primary dark-text-primary">
+    <footer className="z-20 relative p-4 bg-white border-t border-indigo-50 h-[5vh] dark-border-primary dark-bg-primary dark-text-primary">
       <div className="h-full flex items-center justify-center">
         <p>
           Developed By Love ❤️ By

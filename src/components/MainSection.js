@@ -2,23 +2,28 @@ import FlatUiColor from "./FlatUiColor/FlatUiColor";
 import BoxShadow from "./BoxShadow/BoxShadow";
 import { Routes, Route } from "react-router-dom";
 import { useRecoilState } from "recoil";
-import { toolsSidebarAtom } from "../atoms/TrigerSidebarsAtom";
+import { menuSidebarAtom, toolsSidebarAtom } from "../atoms/TrigerSidebarsAtom";
+import ToolsSidebar from "./ToolsSidebar";
 
 const MainSection = () => {
   const [toolsSidebar] = useRecoilState(toolsSidebarAtom);
+  const [menuSidebar] = useRecoilState(menuSidebarAtom);
 
   return (
-    <section
-      className={`${
-        toolsSidebar ? "min-w-full" : "min-w-[78%]"
-      } transition-all`}
-    >
-      <Routes>
-        <Route path="/" element={<FlatUiColor />} />
-        <Route path="/flat-ui-color" element={<FlatUiColor />} />
-        <Route path="/box-shadow-generator" element={<BoxShadow />} />
-      </Routes>
-    </section>
+    <div className="flex h-[87vh]">
+      <section
+        className={`${menuSidebar ? "ml-[130px]" : " "} ${
+          toolsSidebar ? "mr-[300px]" : ""
+        }  transition-all w-[100%]`}
+      >
+        <Routes>
+          <Route path="/" element={<FlatUiColor />} />
+          <Route path="/flat-ui-color" element={<FlatUiColor />} />
+          <Route path="/box-shadow-generator" element={<BoxShadow />} />
+        </Routes>
+      </section>
+      <ToolsSidebar />
+    </div>
   );
 };
 

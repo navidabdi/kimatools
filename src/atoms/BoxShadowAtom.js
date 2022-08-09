@@ -3,12 +3,12 @@ import { atom } from "recoil";
 // Width Atoms
 export const valueWidthAtom = atom({
   key: "valueWidthAtom",
-  default: 450,
+  default: 400,
 });
 // Height Atoms
 export const valueHeightAtom = atom({
   key: "valueHeightAtom",
-  default: 450,
+  default: 400,
 });
 // Border radius Atoms
 export const borderRadiustAtom = atom({
