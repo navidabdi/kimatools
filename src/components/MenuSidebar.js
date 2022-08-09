@@ -1,16 +1,25 @@
+import { Link } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { menuSidebarAtom } from "../atoms/TrigerSidebarsAtom";
 const MenuSidebar = () => {
+  const [menuSidebar] = useRecoilState(menuSidebarAtom);
+
   return (
-    <aside className="col-span-1 bg-white">
-      <ul className="">
-        <li className="text-center duration-100 ease-in hover:bg-blue-200">
-          <a href="#" className="block py-3">
+    <aside
+      className={`${
+        menuSidebar ? "hidden" : ""
+      } col-span-1 bg-white border-r border-indigo-100 dark-bg-primary dark-border-primary`}
+    >
+      <ul className="dark-text-primary">
+        <li className="text-center duration-100 ease-in hover:bg-indigo-200 hover:dark-bg-secendery">
+          <Link to="/flat-ui-color" className="block py-3">
             Flat UI Color
-          </a>
+          </Link>
         </li>
-        <li className="text-center py-3 duration-100 ease-in hover:bg-blue-200">
-          <a href="#" className="block">
-            blob
-          </a>
+        <li className="text-center duration-100 ease-in hover:bg-indigo-200 hover:dark-bg-secendery">
+          <Link to="/box-shadow-generator" className="block py-3">
+            Box Shadow
+          </Link>
         </li>
       </ul>
     </aside>

@@ -1,11 +1,33 @@
 // Import components
-import { Header, Footer, ToolsSidebar, MainSection } from "./components";
-import { Link } from "react-router-dom";
+import {
+  Header,
+  Footer,
+  ToolsSidebar,
+  MainSection,
+  MenuSidebar,
+} from "./components";
+
 import { useRecoilState } from "recoil";
 import { darkModeAtom } from "./atoms/DarkModeAtom";
-
+import { menuSidebarAtom, toolsSidebarAtom } from "./atoms/TrigerSidebarsAtom";
 const App = () => {
   const [darkMode] = useRecoilState(darkModeAtom);
+  const [menuSidebar] = useRecoilState(menuSidebarAtom);
+  const [toolsSidebar, setToolsSidebar] = useRecoilState(toolsSidebarAtom);
+
+  const sidebarHandeler = (menuSidebar, toolsSidebar) => {
+    if (menuSidebar && toolsSidebar) {
+      return "grid-cols-12";
+    }
+    if (menuSidebar && !toolsSidebar) {
+      return "col-span-10";
+    }
+    if (!menuSidebar && toolsSidebar) {
+      return "col-span-11";
+    }
+
+    return "col-span-9";
+  };
 
   return (
     <div
@@ -14,21 +36,12 @@ const App = () => {
       }grid grid-cols-10 grid-rows-1 dark-text-primary`}
     >
       <Header />
-      <aside className="col-span-1 bg-white border-r border-indigo-100 dark-bg-primary dark-border-primary">
-        <ul className="dark-text-primary">
-          <li className="text-center duration-100 ease-in hover:bg-indigo-200 hover:dark-bg-secendery">
-            <Link to="/flat-ui-color" className="block py-3">
-              Flat UI Color
-            </Link>
-          </li>
-          <li className="text-center duration-100 ease-in hover:bg-indigo-200 hover:dark-bg-secendery">
-            <Link to="/box-shadow-generator" className="block py-3">
-              Box Shadow
-            </Link>
-          </li>
-        </ul>
-      </aside>
-      <section className="col-span-9 flex h-[87vh]">
+      <MenuSidebar />
+      <section
+        className={`${
+          menuSidebar ? "col-span-10" : "col-span-9"
+        } flex h-[87vh]`}
+      >
         <MainSection />
         <ToolsSidebar />
       </section>
