@@ -15,6 +15,7 @@ import { useRecoilState } from "recoil";
 
 import ColorPicker from "../Controlers/ColorPicker";
 import { Accordion } from "../../Layouts";
+import Export from "../Export";
 const BoxShadowTools = () => {
   const [valueWidth, setValueWidth] = useRecoilState(valueWidthAtom);
   const [valueHeigh, setValueHeigh] = useRecoilState(valueHeightAtom);
@@ -133,6 +134,7 @@ const BoxShadowTools = () => {
           />,
         ]}
       />
+      <Export />
     </div>
   );
 };

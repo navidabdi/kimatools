@@ -4,7 +4,7 @@ import ToolsSidebar from "./ToolsSidebar";
 import MainSection from "./MainSection";
 import Header from "./Header";
 import Footer from "./Footer";
-
+import Export from "./Export";
 import BoxShadow from "./BoxShadow/BoxShadow";
 import BoxShadowTools from "./BoxShadow/BoxShadowTools";
 
@@ -17,4 +17,5 @@ export {
   Footer,
   BoxShadow,
   BoxShadowTools,
+  Export,
 };
