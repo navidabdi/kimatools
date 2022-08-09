@@ -8,7 +8,7 @@ const Export = () => {
       <h3 className="font-bold">Export</h3>
       <button
         onClick={() => setShowPopup(!showPopup)}
-        className="bg-third py-1 px-3 rounded"
+        className="bg-main py-1 px-3 rounded"
       >
         Show Code
       </button>

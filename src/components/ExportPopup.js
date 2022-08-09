@@ -22,17 +22,17 @@ const ExportPopup = ({ title, description, data }) => {
       <div
         className={`${
           copyTriger ? "translate-y-0" : "translate-y-[100px]"
-        } font-bold text-secondery flex justify-between absolute left-[50%] z-[52] top-[180px] rounded-full translate-x-[-50%]  bg-primary py-3 px-6 transition-all`}
+        } font-bold text-secondery flex justify-between absolute left-[50%] z-[52] top-[180px] rounded-full translate-x-[-50%]  bg-primary py-3 px-6 transition-all bg-white dark-bg-primary`}
       >
         <p>Copeid!</p>
         <CheckIcon className="w-6 h-6 ml-3" />
       </div>
-      <div className=" w-[350px] min-h-[350px] bg-white z-[52] rounded-2xl p-4">
+      <div className=" w-[350px] min-h-[350px] bg-white z-[52] dark-text-primary dark-bg-primary rounded-2xl p-4">
         <div>
           <h2 className="text-xl font-bold mb-2">{title}</h2>
           <p>{description}</p>
         </div>
-        <div className="bg-gray-100 rounded p-3 mt-4 min-h-[220px] relative">
+        <div className="bg-gray-100 dark-bg-foure rounded p-3 mt-4 min-h-[220px] relative">
           <p>{data}</p>
           <button
             onClick={() => {
@@ -42,9 +42,9 @@ const ExportPopup = ({ title, description, data }) => {
                 setCopyTriger(false);
               }, 1000);
             }}
-            className="absolute bottom-2 right-2 p-2 cursor-pointer bg-third rounded opacity-40 transition-all hover:opacity-100"
+            className="absolute bottom-2 right-2 p-2 cursor-pointer bg-third rounded opacity-40 dark:opacity-70 transition-all hover:opacity-100"
           >
-            <DocumentDuplicateIcon className="w-7 h-7" />
+            <DocumentDuplicateIcon className="w-7 h-7 dark-text-primary" />
           </button>
         </div>
       </div>

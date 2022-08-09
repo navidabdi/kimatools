@@ -33,7 +33,7 @@ body {
   font-weight: 400;
   min-height: 100vh;
   transition: all 0.5s ease;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 @layer components {
@@ -45,6 +45,9 @@ body {
   }
   .bg-third {
     @apply bg-indigo-100;
+  }
+  .bg-main {
+    @apply bg-indigo-500 text-white;
   }
   .bg-hover {
     @apply cursor-pointer transition-all hover:bg-indigo-500 hover:text-white;
