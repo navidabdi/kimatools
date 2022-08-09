@@ -50,3 +50,8 @@ export const shadowColorAtom = atom({
   key: "shadowColorAtom",
   default: "rgba(0, 0, 0,0.1)",
 });
+// Export Box Shadow Atoms
+export const exportBoxShadowAtom = atom({
+  key: "exportBoxShadowAtom",
+  default: "box-shadow: rgb(0, 0 ,0 ,0.1) 0px 10px 15px -3px;",
+});
