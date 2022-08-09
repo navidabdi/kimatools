@@ -11,6 +11,7 @@ import {
   shadowColorAtom,
 } from "../../atoms/BoxShadowAtom";
 import { useRecoilState } from "recoil";
+import ExportPopup from "../ExportPopup";
 
 const BoxShadow = () => {
   const [valueWidth] = useRecoilState(valueWidthAtom);
@@ -24,22 +25,35 @@ const BoxShadow = () => {
   const [colorMain] = useRecoilState(mainBgShadowAtom);
   const [shadowColor] = useRecoilState(shadowColorAtom);
 
+  const dataExport = {
+    title: "Generated Box Shadow",
+    des: "This is the CSS needed to generate the box shadows you see in the app.",
+    data: `box-shadow: ${horizontalOffset}px ${verticalOffset}px ${blurRadius}px ${spreadRadius}px ${shadowColor};`,
+  };
+
   return (
-    <div
-      className="bg-gray-100 min-h-full flex items-center justify-center overflow-hidden"
-      style={{ backgroundColor: colorMain }}
-    >
+    <>
       <div
-        className=" h-[450px] bg-white rounded-[50px]"
-        style={{
-          width: valueWidth + "px",
-          height: valueHeight + "px",
-          borderRadius: borderRadius + "px",
-          backgroundColor: colorBox,
-          boxShadow: `${horizontalOffset}px ${verticalOffset}px ${blurRadius}px ${spreadRadius}px ${shadowColor}`,
-        }}
-      ></div>
-    </div>
+        className="bg-gray-100 min-h-full flex items-center justify-center overflow-hidden"
+        style={{ backgroundColor: colorMain }}
+      >
+        <div
+          className=" h-[450px] bg-white rounded-[50px]"
+          style={{
+            width: valueWidth + "px",
+            height: valueHeight + "px",
+            borderRadius: borderRadius + "px",
+            backgroundColor: colorBox,
+            boxShadow: `${horizontalOffset}px ${verticalOffset}px ${blurRadius}px ${spreadRadius}px ${shadowColor}`,
+          }}
+        ></div>
+      </div>
+      <ExportPopup
+        title={dataExport.title}
+        description={dataExport.des}
+        data={dataExport.data}
+      />
+    </>
   );
 };
 

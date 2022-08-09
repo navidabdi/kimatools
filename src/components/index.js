@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import Export from "./Export";
 import BoxShadow from "./BoxShadow/BoxShadow";
 import BoxShadowTools from "./BoxShadow/BoxShadowTools";
+import ExportPopup from "./ExportPopup";
 
 // Export components that we import to this index file
 export {
@@ -18,4 +19,5 @@ export {
   BoxShadow,
   BoxShadowTools,
   Export,
+  ExportPopup,
 };

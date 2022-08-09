@@ -10,3 +10,8 @@ export const toolsSidebarAtom = atom({
   key: "toolsSidebarAtom",
   default: true,
 });
+// Export Popup Atom
+export const exportPopupAtom = atom({
+  key: "exportPopupAtom",
+  default: false,
+});

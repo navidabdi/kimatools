@@ -33,7 +33,7 @@ body {
   font-weight: 400;
   min-height: 100vh;
   transition: all 0.5s ease;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 @layer components {
@@ -51,6 +51,12 @@ body {
   }
   .border-primary {
     @apply border-indigo-100;
+  }
+  .text-primary {
+    @apply text-neutral-900;
+  }
+  .text-secondery {
+    @apply text-indigo-500;
   }
   .dark-bg-primary {
     @apply dark:bg-neutral-900;
