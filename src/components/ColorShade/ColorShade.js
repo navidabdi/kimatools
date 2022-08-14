@@ -61,7 +61,6 @@ const ColorShade = () => {
             }}
           >
             {color}
-            {console.log(checkLuminance(color))}
           </div>
         ))}
       </div>

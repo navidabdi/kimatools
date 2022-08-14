@@ -6,7 +6,7 @@ import {
   colorShadeTwoAtom,
 } from "../../atoms/ColorShadeAtom";
 import { Accordion } from "../../Layouts";
-import { ColorPicker, RangeInput } from "../Controlers";
+import { ColorPicker, RangeInput, SlideInputRadio } from "../Controlers";
 
 const ColorShadeTools = () => {
   const [colorShadeOne, setColorShadeOne] = useRecoilState(colorShadeOneAtom);
@@ -59,6 +59,7 @@ const ColorShadeTools = () => {
           />,
         ]}
       />
+      <Accordion title="Type" content={<SlideInputRadio />} />
     </>
   );
 };
