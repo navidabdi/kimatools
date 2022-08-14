@@ -1,3 +1,4 @@
 import RangeInput from "./RangeInput";
 import ColorPicker from "./ColorPicker";
-export { RangeInput, ColorPicker };
+import SlideInputRadio from "./SlideInputRadio/SlideInputRadio";
+export { RangeInput, ColorPicker, SlideInputRadio };

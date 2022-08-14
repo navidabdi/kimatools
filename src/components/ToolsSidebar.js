@@ -18,7 +18,7 @@ const ToolsSidebar = () => {
         <Route path="/" element={<FlatUiTools />} />
         <Route path="/flat-ui-color" element={<FlatUiTools />} />
         <Route path="/box-shadow-generator" element={<BoxShadowTools />} />
-        <Route path="/color-full" element={<ColorShadeTools />} />
+        <Route path="/color-shade" element={<ColorShadeTools />} />
       </Routes>
     </aside>
   );

@@ -21,7 +21,7 @@ const MainSection = () => {
           <Route path="/" element={<FlatUiColor />} />
           <Route path="/flat-ui-color" element={<FlatUiColor />} />
           <Route path="/box-shadow-generator" element={<BoxShadow />} />
-          <Route path="/color-full" element={<ColorShade />} />
+          <Route path="/color-shade" element={<ColorShade />} />
         </Routes>
       </section>
       <ToolsSidebar />

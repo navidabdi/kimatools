@@ -10,7 +10,7 @@ const ExportPopup = ({ title, description, data }) => {
   return (
     <div
       className={`${
-        showPopup
+        showPopup === true
           ? "scale-100 pointer-events-auto"
           : "scale-0 pointer-events-none"
       } absolute left-0 top-0 w-full h-full flex justify-center items-center transition-all duration-300 z-[999]`}
