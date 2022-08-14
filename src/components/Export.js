@@ -7,7 +7,7 @@ const Export = () => {
     <div className="sticky z-50 left-0 p-4 bg-white w-full bottom-0 dark-bg-primary dark-text-primary border-t border-primary flex justify-between items-center">
       <h3 className="font-bold">Export</h3>
       <button
-        onClick={() => setShowPopup(!showPopup)}
+        onClick={() => setShowPopup(true)}
         className="bg-main py-1 px-3 rounded"
       >
         Show Code

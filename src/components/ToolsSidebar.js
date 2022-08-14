@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import BoxShadowTools from "./BoxShadow/BoxShadowTools";
 import { useRecoilState } from "recoil";
 import { toolsSidebarAtom } from "../atoms/TrigerSidebarsAtom";
+import ColorFullTools from "./ChromaColors/ColorFullTools";
 
 const ToolsSidebar = () => {
   const [toolsSidebar] = useRecoilState(toolsSidebarAtom);
@@ -17,6 +18,7 @@ const ToolsSidebar = () => {
         <Route path="/" element={<FlatUiTools />} />
         <Route path="/flat-ui-color" element={<FlatUiTools />} />
         <Route path="/box-shadow-generator" element={<BoxShadowTools />} />
+        <Route path="/color-full" element={<ColorFullTools />} />
       </Routes>
     </aside>
   );

@@ -21,6 +21,11 @@ const MenuSidebar = () => {
             Box Shadow
           </Link>
         </li>
+        <li className="text-center duration-100 ease-in hover:bg-indigo-200 hover:dark-bg-secendery">
+          <Link to="/color-full" className="block py-3">
+            Color Full
+          </Link>
+        </li>
       </ul>
     </aside>
   );

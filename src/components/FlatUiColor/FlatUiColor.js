@@ -6,11 +6,7 @@ import sound from "../../assets/audio/audio.m4a";
 import CopyColor from "./CopyColor/CopyColor";
 import Color from "./Color/Color";
 
-import {
-  colorPaletteSelector,
-  copyTrigerAtom,
-  menuTrigerAtom,
-} from "../../atoms/FlatUiColor";
+import { colorPaletteSelector, copyTrigerAtom } from "../../atoms/FlatUiColor";
 const FlatUiColor = () => {
   const [copyTheColor, setCopyTheColor] = useState(null);
   const [copyTriger, setCopyTriger] = useRecoilState(copyTrigerAtom);

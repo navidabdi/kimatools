@@ -8,6 +8,8 @@ import Export from "./Export";
 import BoxShadow from "./BoxShadow/BoxShadow";
 import BoxShadowTools from "./BoxShadow/BoxShadowTools";
 import ExportPopup from "./ExportPopup";
+import ColorFull from "./ChromaColors/ColorFull";
+import ColorFullTools from "./ChromaColors/ColorFullTools";
 
 // Export components that we import to this index file
 export {
@@ -20,4 +22,6 @@ export {
   BoxShadowTools,
   Export,
   ExportPopup,
+  ColorFull,
+  ColorFullTools,
 };
