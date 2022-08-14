@@ -1,10 +1,12 @@
 import { MinusIcon, PlusIcon } from "@heroicons/react/outline";
-const RangeInput = ({ min, max, range, value, setValue, title }) => {
+const RangeInput = ({ min, max, range, value, setValue, title, symbol }) => {
   return (
     <div key={title} className="py-4 first:pt-0">
       <div className="flex justify-between mb-2">
         <p className="block text-sm dark-text-primary">{title}</p>
-        <p className="text-sm dark-text-primary">{`${value} px`}</p>
+        <p className="text-sm dark-text-primary">{`${value} ${
+          symbol ?? "px"
+        }`}</p>
       </div>
       <div className="flex items-center justify-between">
         <button

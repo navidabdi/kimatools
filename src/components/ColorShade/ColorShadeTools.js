@@ -1,15 +1,17 @@
 import React from "react";
 import { useRecoilState } from "recoil";
 import {
+  colorShadeNumAtom,
   colorShadeOneAtom,
   colorShadeTwoAtom,
 } from "../../atoms/ColorShadeAtom";
 import { Accordion } from "../../Layouts";
-import { ColorPicker } from "../Controlers";
+import { ColorPicker, RangeInput } from "../Controlers";
 
 const ColorShadeTools = () => {
   const [colorShadeOne, setColorShadeOne] = useRecoilState(colorShadeOneAtom);
   const [colorShadeTwo, setColorShadeTwo] = useRecoilState(colorShadeTwoAtom);
+  const [colorShadeNum, setColorShadeNum] = useRecoilState(colorShadeNumAtom);
 
   const presetColors = [
     "rgba(154, 205, 50,0.9)",
@@ -27,6 +29,20 @@ const ColorShadeTools = () => {
   return (
     <>
       <Accordion
+        title="Shade"
+        content={[
+          <RangeInput
+            title="Shade Number"
+            symbol="Num"
+            min={3}
+            max={20}
+            range={1}
+            value={colorShadeNum}
+            setValue={setColorShadeNum}
+          />,
+        ]}
+      />
+      <Accordion
         title="Colors"
         content={[
           <ColorPicker
@@ -37,9 +53,9 @@ const ColorShadeTools = () => {
           />,
           <ColorPicker
             title="Color Two"
-            color={colorShadeOne}
-            setColor={colorShadeTwo}
-            presetColors={setColorShadeTwo}
+            color={colorShadeTwo}
+            setColor={setColorShadeTwo}
+            presetColors={presetColors}
           />,
         ]}
       />

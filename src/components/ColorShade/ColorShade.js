@@ -4,19 +4,27 @@ import { useRecoilState } from "recoil";
 import { soundTrigerAtom, copyTrigerAtom } from "../../atoms/FlatUiColor";
 import CopyColor from "../FlatUiColor/CopyColor/CopyColor";
 import sound from "../../assets/audio/audio.m4a";
+import {
+  colorShadeNumAtom,
+  colorShadeOneAtom,
+  colorShadeTwoAtom,
+} from "../../atoms/ColorShadeAtom";
 
 const ColorShade = () => {
   const [copyTriger, setCopyTriger] = useRecoilState(copyTrigerAtom);
   const [copyTheColor, setCopyTheColor] = useState(null);
   const [soundTriger] = useRecoilState(soundTrigerAtom);
 
+  const [colorShadeOne] = useRecoilState(colorShadeOneAtom);
+  const [colorShadeTwo] = useRecoilState(colorShadeTwoAtom);
+  const [colorShadeNum] = useRecoilState(colorShadeNumAtom);
+
   const playSound = () => {
     const audio = new Audio(sound);
     audio.play();
   };
 
-  const colorNum = 20;
-  const heightHandler = 87 / colorNum + "vh";
+  const heightHandler = 87 / colorShadeNum + "vh";
   const checkLuminance = (color) => {
     if (chroma(color).luminance() > 0.5) {
       return "#000";
@@ -25,7 +33,10 @@ const ColorShade = () => {
     }
   };
 
-  const colors = chroma.scale(["yellow", "navy"]).mode("hsl").colors(colorNum);
+  const colors = chroma
+    .scale([colorShadeOne, colorShadeTwo])
+    .mode("hsl")
+    .colors(colorShadeNum);
   return (
     <>
       <div className="grid overflow-hidden">
