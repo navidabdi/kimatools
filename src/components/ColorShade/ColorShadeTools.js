@@ -1,7 +1,7 @@
 import React from "react";
 
-const ColorFullTools = () => {
+const ColorShadeTools = () => {
   return <div>ChromaTools</div>;
 };
 
-export default ColorFullTools;
+export default ColorShadeTools;

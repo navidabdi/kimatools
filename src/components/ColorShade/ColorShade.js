@@ -5,7 +5,7 @@ import { soundTrigerAtom, copyTrigerAtom } from "../../atoms/FlatUiColor";
 import CopyColor from "../FlatUiColor/CopyColor/CopyColor";
 import sound from "../../assets/audio/audio.m4a";
 
-const ColorFull = () => {
+const ColorShade = () => {
   const [copyTriger, setCopyTriger] = useRecoilState(copyTrigerAtom);
   const [copyTheColor, setCopyTheColor] = useState(null);
   const [soundTriger] = useRecoilState(soundTrigerAtom);
@@ -63,4 +63,4 @@ const ColorFull = () => {
   );
 };
 
-export default ColorFull;
+export default ColorShade;

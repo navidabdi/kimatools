@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { menuSidebarAtom, toolsSidebarAtom } from "../atoms/TrigerSidebarsAtom";
 import ToolsSidebar from "./ToolsSidebar";
-import ColorFull from "./ChromaColors/ColorFull";
+import ColorShade from "./ColorShade/ColorShade";
 
 const MainSection = () => {
   const [toolsSidebar] = useRecoilState(toolsSidebarAtom);
@@ -21,7 +21,7 @@ const MainSection = () => {
           <Route path="/" element={<FlatUiColor />} />
           <Route path="/flat-ui-color" element={<FlatUiColor />} />
           <Route path="/box-shadow-generator" element={<BoxShadow />} />
-          <Route path="/color-full" element={<ColorFull />} />
+          <Route path="/color-full" element={<ColorShade />} />
         </Routes>
       </section>
       <ToolsSidebar />
