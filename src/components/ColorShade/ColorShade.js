@@ -5,6 +5,7 @@ import { soundTrigerAtom, copyTrigerAtom } from "../../atoms/FlatUiColor";
 import CopyColor from "../FlatUiColor/CopyColor/CopyColor";
 import sound from "../../assets/audio/audio.m4a";
 import {
+  colorShadeModeAtom,
   colorShadeNumAtom,
   colorShadeOneAtom,
   colorShadeTwoAtom,
@@ -18,6 +19,7 @@ const ColorShade = () => {
   const [colorShadeOne] = useRecoilState(colorShadeOneAtom);
   const [colorShadeTwo] = useRecoilState(colorShadeTwoAtom);
   const [colorShadeNum] = useRecoilState(colorShadeNumAtom);
+  const [colorShadeMode] = useRecoilState(colorShadeModeAtom);
 
   const playSound = () => {
     const audio = new Audio(sound);
@@ -35,7 +37,7 @@ const ColorShade = () => {
 
   const colors = chroma
     .scale([colorShadeOne, colorShadeTwo])
-    .mode("hsl")
+    .mode(colorShadeMode)
     .colors(colorShadeNum);
   return (
     <>

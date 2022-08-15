@@ -239,15 +239,3 @@ input[type="range"]::-webkit-slider-runnable-track {
 input[type="range"]:disabled::-webkit-slider-thumb {
   cursor: not-allowed;
 }
-
-input[id="lab"].peer:checked ~ .glider {
-  transform: translateX(0);
-}
-
-input[id="hsl"].peer:checked ~ .glider {
-  transform: translateX(100%);
-}
-
-input[id="lch"].peer:checked ~ .glider {
-  transform: translateX(200%);
-}

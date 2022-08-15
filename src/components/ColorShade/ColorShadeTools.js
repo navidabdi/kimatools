@@ -1,6 +1,8 @@
 import React from "react";
 import { useRecoilState } from "recoil";
+import { useState } from "react";
 import {
+  colorShadeModeAtom,
   colorShadeNumAtom,
   colorShadeOneAtom,
   colorShadeTwoAtom,
@@ -12,6 +14,8 @@ const ColorShadeTools = () => {
   const [colorShadeOne, setColorShadeOne] = useRecoilState(colorShadeOneAtom);
   const [colorShadeTwo, setColorShadeTwo] = useRecoilState(colorShadeTwoAtom);
   const [colorShadeNum, setColorShadeNum] = useRecoilState(colorShadeNumAtom);
+  const shadeModeArgs = ["lab", "hsl", "lch", "lrgb"];
+  const [shadeMode, setShadeMode] = useRecoilState(colorShadeModeAtom);
 
   const presetColors = [
     "rgba(154, 205, 50,0.9)",
@@ -59,7 +63,17 @@ const ColorShadeTools = () => {
           />,
         ]}
       />
-      <Accordion title="Type" content={<SlideInputRadio title="Mode" />} />
+      <Accordion
+        title="Type"
+        content={
+          <SlideInputRadio
+            title="Shade Mode"
+            args={shadeModeArgs}
+            value={shadeMode}
+            setValue={setShadeMode}
+          />
+        }
+      />
     </>
   );
 };
