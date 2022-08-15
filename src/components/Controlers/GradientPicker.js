@@ -1,16 +1,24 @@
-import React, { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import ColorRange from "./ColorRange";
 
-import { gradientTempltates } from "../../../utils/constantsWavy";
+import { gradientColorsAtom, gradientTempltates } from "../../atoms/Wavy";
+import { useRecoilState } from "recoil";
 
-export default React.memo(function GradientPicker({
-  gradient,
-  handleGradientChange,
-}) {
+const GradientPicker = () => {
+  const [gradient, setGradientColors] = useRecoilState(gradientColorsAtom);
   const [currentColor, setCurrentColor] = useState(Object.keys(gradient)[0]);
   const [templates, setTemplates] = useState([gradient, ...gradientTempltates]);
   const [currentTemplate, setCurrentTemplate] = useState(0);
+
+  const handleGradientChange = useCallback(
+    (changedGradient) => {
+      setGradientColors((prev) => {
+        return { ...prev, ...changedGradient };
+      });
+    },
+    [setGradientColors],
+  );
 
   useEffect(() => {
     setTemplates((prev) => {
@@ -77,4 +85,6 @@ export default React.memo(function GradientPicker({
       </div>
     </div>
   );
-});
+};
+
+export default GradientPicker;
