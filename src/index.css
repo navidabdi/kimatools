@@ -240,14 +240,14 @@ input[type="range"]:disabled::-webkit-slider-thumb {
   cursor: not-allowed;
 }
 
-input[id="radio-1"].peer:checked ~ .glider {
+input[id="lab"].peer:checked ~ .glider {
   transform: translateX(0);
 }
 
-input[id="radio-2"].peer:checked ~ .glider {
+input[id="hsl"].peer:checked ~ .glider {
   transform: translateX(100%);
 }
 
-input[id="radio-3"].peer:checked ~ .glider {
+input[id="lch"].peer:checked ~ .glider {
   transform: translateX(200%);
 }

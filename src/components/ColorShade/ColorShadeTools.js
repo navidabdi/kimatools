@@ -59,7 +59,7 @@ const ColorShadeTools = () => {
           />,
         ]}
       />
-      <Accordion title="Type" content={<SlideInputRadio />} />
+      <Accordion title="Type" content={<SlideInputRadio title="Mode" />} />
     </>
   );
 };

@@ -1,21 +1,35 @@
-const SlideInputRadio = () => {
-  return (
-    <div className="tabs bg-third flex relative p-1 rounded-xl">
-      <input
-        type="radio"
-        id="radio-1"
-        name="tabs"
-        className="peer hidden"
-        defaultChecked
-      />
-      <label
-        className="cursor-pointer text-primary transition text-xl font-semibold peer-checked:text-secondery z-10 flex items-center justify-center w-[90px] h-[50px]"
-        htmlFor="radio-1"
-      >
-        one
-      </label>
+import { useState } from "react";
 
-      <span className="glider bg-primary z-0 rounded-xl absolute w-[90px] h-[50px] flex transition"></span>
+const SlideInputRadio = () => {
+  const args = ["lab", "hsl", "lch", "lrgb"];
+
+  const [shadeMode, setShadeMode] = useState("hsl");
+
+  return (
+    <div className="bg-third flex relative p-1 justify-between items-center h-16 rounded-xl">
+      {args.map((arg, index) => (
+        <div
+          key={arg}
+          className="h-full flex items-center justify-center flex-1"
+        >
+          <input
+            type="radio"
+            id={arg}
+            name="tabs"
+            className="peer hidden"
+            value={arg}
+            checked={arg === shadeMode}
+            onChange={(e) => setShadeMode(e.target.value)}
+          />
+
+          <label
+            className="cursor-pointer transition text-lg font-semibold peer-checked:text-secondery text-primary w-full h-full justify-center items-center flex peer-checked:bg-primary rounded-xl"
+            htmlFor={arg}
+          >
+            {arg}
+          </label>
+        </div>
+      ))}
     </div>
   );
 };

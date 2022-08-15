@@ -15,7 +15,7 @@ export const colorShadeNumAtom = atom({
   key: "colorShadeNumAtom",
   default: 10,
 });
-// Color Shade Number
+// Color Shade Mode
 export const colorShadeModeAtom = atom({
   key: "colorShadeModeAtom",
   default: "hsl",
