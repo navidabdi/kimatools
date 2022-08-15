@@ -4,6 +4,7 @@ import BoxShadowTools from "./BoxShadow/BoxShadowTools";
 import { useRecoilState } from "recoil";
 import { toolsSidebarAtom } from "../atoms/TrigerSidebarsAtom";
 import ColorShadeTools from "./ColorShade/ColorShadeTools";
+import WavyTools from "./Wavy/WavyTools";
 
 const ToolsSidebar = () => {
   const [toolsSidebar] = useRecoilState(toolsSidebarAtom);
@@ -19,6 +20,7 @@ const ToolsSidebar = () => {
         <Route path="/flat-ui-color" element={<FlatUiTools />} />
         <Route path="/box-shadow-generator" element={<BoxShadowTools />} />
         <Route path="/color-shade" element={<ColorShadeTools />} />
+        <Route path="/wavy" element={<WavyTools />} />
       </Routes>
     </aside>
   );

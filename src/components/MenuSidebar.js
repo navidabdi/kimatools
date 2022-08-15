@@ -26,6 +26,11 @@ const MenuSidebar = () => {
             Color Shade
           </Link>
         </li>
+        <li className="duration-100 ease-in hover:bg-indigo-200 hover:dark-bg-secendery">
+          <Link to="/wavy" className="block p-3">
+            Wavy
+          </Link>
+        </li>
       </ul>
     </aside>
   );

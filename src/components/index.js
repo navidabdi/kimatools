@@ -10,7 +10,8 @@ import BoxShadowTools from "./BoxShadow/BoxShadowTools";
 import ExportPopup from "./ExportPopup";
 import ColorFull from "./ColorShade/ColorShade";
 import ColorFullTools from "./ColorShade/ColorShadeTools";
-
+import Wavy from "./Wavy/Wavy";
+import WavyTools from "./Wavy/WavyTools";
 // Export components that we import to this index file
 export {
   MenuSidebar,
@@ -24,4 +25,6 @@ export {
   ExportPopup,
   ColorFull,
   ColorFullTools,
+  Wavy,
+  WavyTools,
 };
