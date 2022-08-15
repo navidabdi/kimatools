@@ -1,6 +1,5 @@
 import React from "react";
 import { useRecoilState } from "recoil";
-import { useState } from "react";
 import {
   colorShadeModeAtom,
   colorShadeNumAtom,

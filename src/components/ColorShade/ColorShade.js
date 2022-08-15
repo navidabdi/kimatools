@@ -42,9 +42,9 @@ const ColorShade = () => {
   return (
     <>
       <div className="grid overflow-hidden">
-        {colors.map((color) => (
+        {colors.map((color, index) => (
           <div
-            key={color}
+            key={color + index}
             className={`flex items-center justify-center font-semibold cursor-pointer transition-[transform] hover:scale-95`}
             style={{
               backgroundColor: color,

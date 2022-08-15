@@ -1,8 +1,8 @@
 const SlideInputRadio = ({ args, title, value, setValue }) => {
   return (
     <>
-      <p className="mb-2">{title}</p>
-      <div className="bg-third flex relative p-1 justify-between items-center h-16 rounded-xl">
+      <p className="mb-2 dark-text-primary">{title}</p>
+      <div className="bg-third flex relative p-1 justify-between items-center h-16 rounded-xl dark-bg-secendery">
         {args.map((arg, index) => (
           <div
             key={arg}
@@ -19,7 +19,7 @@ const SlideInputRadio = ({ args, title, value, setValue }) => {
             />
 
             <label
-              className="cursor-pointer transition text-lg font-semibold peer-checked:text-secondery text-primary w-full h-full justify-center items-center flex peer-checked:bg-primary rounded-xl"
+              className="cursor-pointer transition text-lg font-semibold peer-checked:text-secondery text-primary w-full h-full justify-center items-center flex peer-checked:bg-primary rounded-xl dark-text-primary peer-checked:dark-bg-foure dark:peer-checked:text-white"
               htmlFor={arg}
             >
               {arg}
