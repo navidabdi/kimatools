@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRecoilState } from "recoil";
 import sound from "../../assets/audio/audio.m4a";
 
-import CopyColor from "./CopyColor/CopyColor";
+import CopyColor from "../CopyColor";
 import Color from "./Color/Color";
 
 import { colorPaletteSelector, copyTrigerAtom } from "../../atoms/FlatUiColor";

@@ -1,6 +1,7 @@
 import React from "react";
 import { useRecoilState } from "recoil";
-import { copyTrigerAtom } from "../../../atoms/FlatUiColor/copyTrigerAtom";
+import { copyTrigerAtom } from "../atoms/FlatUiColor/copyTrigerAtom";
+
 const CopyColor = ({ copyTheColor }) => {
   const [copyTriger] = useRecoilState(copyTrigerAtom);
   const opacityVal = copyTriger ? 1 : 0;

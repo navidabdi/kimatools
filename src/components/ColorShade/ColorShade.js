@@ -2,7 +2,7 @@ import chroma from "chroma-js";
 import { useState } from "react";
 import { useRecoilState } from "recoil";
 import { soundTrigerAtom, copyTrigerAtom } from "../../atoms/FlatUiColor";
-import CopyColor from "../FlatUiColor/CopyColor/CopyColor";
+import CopyColor from "../CopyColor";
 import sound from "../../assets/audio/audio.m4a";
 import {
   colorShadeModeAtom,
