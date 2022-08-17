@@ -38,7 +38,7 @@ const WavyTools = () => {
           <RangeInput
             title="Height"
             min={200}
-            max={800}
+            max={600}
             range={100}
             value={config.height}
             setValue={(height) => handleConfigChange({ height })}

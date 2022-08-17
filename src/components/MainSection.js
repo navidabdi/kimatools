@@ -12,7 +12,7 @@ const MainSection = () => {
   const [menuSidebar] = useRecoilState(menuSidebarAtom);
 
   return (
-    <div className="flex h-[87vh]">
+    <div className="flex h-[87vh] overflow-hidden">
       <section
         className={`${menuSidebar ? "ml-[130px]" : " "} ${
           toolsSidebar ? "mr-[300px]" : ""

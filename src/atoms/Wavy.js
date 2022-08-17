@@ -3,7 +3,7 @@ import { waveInit } from "../wave";
 
 export const heightRange = {
   min: 200,
-  max: 800,
+  max: 600,
   step: 100,
 };
 
