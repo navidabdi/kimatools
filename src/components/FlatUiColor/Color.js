@@ -39,7 +39,7 @@ const Color = ({ color, setCopyTheColor, playSound }) => {
           style={{
             color: checkLuminance(color.hex),
           }}
-          className="absolute right-3 bottom-3 font-semibold text-sm opacity-70 uppercase"
+          className="absolute right-3 bottom-3 font-semibold text-sm opacity-80 uppercase"
         >
           {color.name}
         </p>

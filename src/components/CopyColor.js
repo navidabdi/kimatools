@@ -9,11 +9,12 @@ const CopyColor = ({ copyTheColor }) => {
   const scaleVal = copyTriger ? "scale(1)" : "scale(1.2)";
 
   const checkLuminance = (color) => {
-    if (chroma(color).luminance() > 0.5) {
-      return "#000";
-    } else {
-      return "#fff";
-    }
+    if (color)
+      if (chroma(color).luminance() > 0.5) {
+        return "#000";
+      } else {
+        return "#fff";
+      }
   };
 
   return (
