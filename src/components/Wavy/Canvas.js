@@ -1,19 +1,32 @@
+import { useRef } from "react";
+import { useEffect } from "react";
 import { useRecoilState } from "recoil";
-import { computedPathAtom, gradientColorsAtom } from "../../atoms/Wavy";
+import {
+  computedPathAtom,
+  gradientColorsAtom,
+  svgRefAtom,
+} from "../../atoms/Wavy";
 
-const Canvas = ({ forwardedRef }) => {
+const Canvas = () => {
   const [computedPath] = useRecoilState(computedPathAtom);
   const [gradientColors] = useRecoilState(gradientColorsAtom);
+  const [svgRef, setSvgRef] = useRecoilState(svgRefAtom);
+
+  const svgElement = useRef();
+
+  useEffect(() => {
+    setSvgRef(svgElement.current);
+  }, [computedPath]);
 
   return (
     <div className="absolute bottom-0 left-0 w-full">
       <svg
-        ref={forwardedRef}
+        ref={svgElement}
         width="100%"
         height="100%"
         viewBox={`0 0 1440 ${computedPath.svg.height ?? 500}`}
         xmlns={computedPath.svg.xmlns}
-        className="f-full transition duration-500 ease-in-out delay-300"
+        className="f-full transition duration-500 ease-in-out delay-300 svg"
       >
         {computedPath.svg.path.map((path, i) => {
           const uniqueId = "_" + Math.random().toString(36).substr(2, 9);

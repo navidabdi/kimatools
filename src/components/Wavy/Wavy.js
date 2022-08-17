@@ -1,14 +1,15 @@
 import ExportPopup from "../ExportPopup";
 import Canvas from "./Canvas";
 import Generator from "./Generator";
-import { useRef } from "react";
+import { svgRefAtom } from "../../atoms/Wavy";
+import { useRecoilState } from "recoil";
 const Wavy = () => {
-  const svgRef = useRef();
-  const svg = svgRef.current;
+  const [svg] = useRecoilState(svgRefAtom);
+
   const dataExport = {
     title: "Generated Wavy SVG",
     des: "Here are your Wavy SVG! you can download it for free!",
-    data: `svg`,
+    data: `sv`,
   };
 
   const download = (href, name) => {
@@ -60,7 +61,7 @@ const Wavy = () => {
 
   return (
     <div>
-      <Generator forwardedRef={svgRef} />
+      <Generator />
       <ExportPopup
         title={dataExport.title}
         description={dataExport.des}

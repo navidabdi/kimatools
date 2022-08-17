@@ -53,11 +53,11 @@ const ExportPopup = ({
             <DocumentDuplicateIcon className="w-7 h-7 dark-text-primary" />
           </button>
         </div>
-        <div className="mt-5 flex justify-center items-center">
+        <div className="flex justify-center items-center">
           {downloadAsSvg ? (
             <button
               onClick={downloadAsSvg}
-              className="px-8 py-3 rounded-full bg-main mr-3"
+              className="px-8 py-3 rounded-full bg-main m-3 mb-0"
             >
               SVG
             </button>
@@ -67,7 +67,7 @@ const ExportPopup = ({
           {downloadAsPng ? (
             <button
               onClick={downloadAsPng}
-              className="px-8 py-3 rounded-full bg-main"
+              className="px-8 py-3 rounded-full bg-main m-3 mb-0"
             >
               PNG
             </button>

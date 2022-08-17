@@ -69,3 +69,8 @@ export const computedPathAtom = atom({
   key: "computedPathAtom",
   default: waveInit(defaultConfigAtom),
 });
+// SVG Ref Atom
+export const svgRefAtom = atom({
+  key: "svgRefAtom",
+  default: null,
+});

@@ -1,11 +1,7 @@
 import Canvas from "./Canvas";
 
-const Generator = ({ forwardedRef }) => {
-  return (
-    <>
-      <Canvas forwardedRef={forwardedRef} />
-    </>
-  );
+const Generator = () => {
+  return <Canvas />;
 };
 
 export default Generator;
