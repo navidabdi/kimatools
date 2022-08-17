@@ -63,7 +63,7 @@ const GradientPicker = () => {
           <ColorRange handleColorSelect={handleColorSelect} />
         </div>
       </div>
-      <div className="flex items-center mt-3 p-2 bg-gray-100 rounded-lg">
+      <div className="flex items-center mt-3 p-2 bg-secondery dark-bg-secendery rounded-lg">
         <ul className="w-full flex justify-end">
           {templates.map((t, i) => {
             return (

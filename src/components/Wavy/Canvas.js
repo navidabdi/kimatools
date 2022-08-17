@@ -19,7 +19,7 @@ const Canvas = () => {
   }, [computedPath]);
 
   return (
-    <div className="absolute bottom-0 left-0 w-full">
+    <div className="absolute bottom-0 left-0 w-full dark-bg-secendery">
       <svg
         ref={svgElement}
         width="100%"

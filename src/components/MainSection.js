@@ -16,7 +16,7 @@ const MainSection = () => {
       <section
         className={`${menuSidebar ? "ml-[130px]" : " "} ${
           toolsSidebar ? "mr-[300px]" : ""
-        }  transition-all w-[100%]`}
+        }  transition-all w-[100%] dark-bg-secendery`}
       >
         <Routes>
           <Route path="/" element={<FlatUiColor />} />

@@ -59,7 +59,7 @@ const Wavy = () => {
   };
 
   return (
-    <div>
+    <>
       <Canvas />
       <ExportPopup
         title={dataExport.title}
@@ -68,7 +68,7 @@ const Wavy = () => {
         downloadAsSvg={downloadAsSvg}
         downloadAsPng={downloadAsPng}
       />
-    </div>
+    </>
   );
 };
 
