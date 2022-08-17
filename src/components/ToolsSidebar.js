@@ -5,6 +5,7 @@ import { useRecoilState } from "recoil";
 import { toolsSidebarAtom } from "../atoms/TrigerSidebarsAtom";
 import ColorShadeTools from "./ColorShade/ColorShadeTools";
 import WavyTools from "./Wavy/WavyTools";
+import HomeTools from "./Home/HomeTools";
 
 const ToolsSidebar = () => {
   const [toolsSidebar] = useRecoilState(toolsSidebarAtom);
@@ -16,7 +17,7 @@ const ToolsSidebar = () => {
       } min-w-[300px] scrollbar-thin bg-white border-l border-indigo-100 dark:bg-neutral-900 dark:border-neutral-600 transition-all  h-[87vh] absolute right-0`}
     >
       <Routes>
-        <Route path="/" element={<FlatUiTools />} />
+        <Route path="/" element={<HomeTools />} />
         <Route path="/flat-ui-color" element={<FlatUiTools />} />
         <Route path="/box-shadow-generator" element={<BoxShadowTools />} />
         <Route path="/color-shade" element={<ColorShadeTools />} />

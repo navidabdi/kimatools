@@ -6,6 +6,7 @@ import { menuSidebarAtom, toolsSidebarAtom } from "../atoms/TrigerSidebarsAtom";
 import ToolsSidebar from "./ToolsSidebar";
 import ColorShade from "./ColorShade/ColorShade";
 import Wavy from "./Wavy/Wavy";
+import Home from "./Home/Home";
 
 const MainSection = () => {
   const [toolsSidebar] = useRecoilState(toolsSidebarAtom);
@@ -19,7 +20,7 @@ const MainSection = () => {
         }  transition-all w-[100%] dark-bg-secendery`}
       >
         <Routes>
-          <Route path="/" element={<FlatUiColor />} />
+          <Route path="/" element={<Home />} />
           <Route path="/flat-ui-color" element={<FlatUiColor />} />
           <Route path="/box-shadow-generator" element={<BoxShadow />} />
           <Route path="/color-shade" element={<ColorShade />} />

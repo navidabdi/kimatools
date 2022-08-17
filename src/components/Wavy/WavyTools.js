@@ -45,6 +45,7 @@ const WavyTools = () => {
           />,
           <RangeInput
             title="Complexity"
+            symbol="time"
             min={2}
             max={10}
             range={1}
@@ -53,6 +54,7 @@ const WavyTools = () => {
           />,
           <RangeInput
             title="Layers Count"
+            symbol="num"
             min={2}
             max={6}
             range={1}

@@ -58,6 +58,9 @@ body {
   .text-primary {
     @apply text-neutral-900;
   }
+  .text-p {
+    @apply text-neutral-700;
+  }
   .text-secondery {
     @apply text-indigo-500;
   }
