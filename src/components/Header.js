@@ -39,6 +39,7 @@ const Header = () => {
             <a
               href="https://webkima.com/"
               target="_blank"
+              rel="noreferrer"
               className="hidden md:block cursor-pointer mr-4"
             >
               <img

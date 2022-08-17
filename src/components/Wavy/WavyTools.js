@@ -1,7 +1,7 @@
 import Accordion from "../../Layouts/Accordion";
 import RangeInput from "../Controlers/RangeInput";
 import { defaultConfigAtom, computedPathAtom } from "../../atoms/Wavy";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useSetRecoilState } from "recoil";
 
 import { useCallback, useEffect } from "react";
 import { waveInit } from "../../wave";
@@ -11,11 +11,11 @@ import Export from "../Export";
 
 const WavyTools = () => {
   const [config, setConfig] = useRecoilState(defaultConfigAtom);
-  const [computedPath, setComputedPath] = useRecoilState(computedPathAtom);
+  const setComputedPath = useSetRecoilState(computedPathAtom);
 
   useEffect(() => {
     setComputedPath(waveInit(config));
-  }, [config]);
+  }, [config, setComputedPath]);
 
   const handleConfigChange = useCallback(
     (changedConfig) => {

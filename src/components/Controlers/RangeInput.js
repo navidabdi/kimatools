@@ -14,7 +14,7 @@ const RangeInput = ({ min, max, range, value, setValue, title, symbol }) => {
             if (value > min) setValue(+value - range);
           }}
           className={`${
-            value == min
+            +value === min
               ? "bg-indigo-200 dark-bg-third"
               : "bg-indigo-500 dark-bg-secendery"
           } text-2xl p-2 text-white items-center justify-center flex rounded-full`}
@@ -35,7 +35,7 @@ const RangeInput = ({ min, max, range, value, setValue, title, symbol }) => {
             if (value < max) setValue(+value + range);
           }}
           className={`${
-            value == max
+            +value === max
               ? "bg-indigo-200 dark-bg-third"
               : "bg-indigo-500 dark-bg-secendery"
           } text-2xl p-2 text-white items-center justify-center flex rounded-full`}

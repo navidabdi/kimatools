@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useEffect } from "react";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useSetRecoilState } from "recoil";
 import {
   computedPathAtom,
   gradientColorsAtom,
@@ -10,13 +10,13 @@ import {
 const Canvas = () => {
   const [computedPath] = useRecoilState(computedPathAtom);
   const [gradientColors] = useRecoilState(gradientColorsAtom);
-  const [svgRef, setSvgRef] = useRecoilState(svgRefAtom);
+  const setSvgRef = useSetRecoilState(svgRefAtom);
 
   const svgElement = useRef();
 
   useEffect(() => {
     setSvgRef(svgElement.current);
-  }, [computedPath]);
+  }, [computedPath, setSvgRef]);
 
   return (
     <div className="absolute bottom-0 left-0 w-full dark-bg-secendery overflow-hidden">
