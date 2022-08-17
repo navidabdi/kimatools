@@ -1,10 +1,11 @@
-import { useRef } from "react";
 import Canvas from "./Canvas";
 
-const Generator = () => {
-  const svgRef = useRef();
-
-  return <Canvas forwardedRef={svgRef} />;
+const Generator = ({ forwardedRef }) => {
+  return (
+    <>
+      <Canvas forwardedRef={forwardedRef} />
+    </>
+  );
 };
 
 export default Generator;

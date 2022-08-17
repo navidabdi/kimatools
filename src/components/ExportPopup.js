@@ -3,7 +3,13 @@ import { useState } from "react";
 import { useRecoilState } from "recoil";
 import { exportBoxShadowAtom } from "../atoms/BoxShadowAtom";
 
-const ExportPopup = ({ title, description, data }) => {
+const ExportPopup = ({
+  title,
+  description,
+  data,
+  downloadAsSvg = null,
+  downloadAsPng = null,
+}) => {
   const [showPopup, setShowPopup] = useRecoilState(exportBoxShadowAtom);
   const [copyTriger, setCopyTriger] = useState(false);
 
@@ -27,13 +33,13 @@ const ExportPopup = ({ title, description, data }) => {
         <p>Copeid!</p>
         <CheckIcon className="w-6 h-6 ml-3" />
       </div>
-      <div className=" w-[350px] min-h-[350px] bg-white z-[52] dark-text-primary dark-bg-primary rounded-2xl p-4">
+      <div className="w-[350px] min-h-[350px] md:w-[700px] md:min-h-[400px] bg-white z-[52] dark-text-primary dark-bg-primary rounded-2xl p-4">
         <div>
           <h2 className="text-xl font-bold mb-2">{title}</h2>
           <p>{description}</p>
         </div>
-        <div className="bg-gray-100 dark-bg-foure rounded p-3 mt-4 min-h-[220px] relative">
-          <p>{data}</p>
+        <div className="bg-gray-100 dark-bg-foure rounded-2xl overflow-hidden p-3 mt-4 min-h-[220px] md:min-h-[400px] relative">
+          {data}
           <button
             onClick={() => {
               navigator.clipboard.writeText(data);
@@ -46,6 +52,28 @@ const ExportPopup = ({ title, description, data }) => {
           >
             <DocumentDuplicateIcon className="w-7 h-7 dark-text-primary" />
           </button>
+        </div>
+        <div className="mt-5 flex justify-center items-center">
+          {downloadAsSvg ? (
+            <button
+              onClick={downloadAsSvg}
+              className="px-8 py-3 rounded-full bg-main mr-3"
+            >
+              SVG
+            </button>
+          ) : (
+            ""
+          )}
+          {downloadAsPng ? (
+            <button
+              onClick={downloadAsPng}
+              className="px-8 py-3 rounded-full bg-main"
+            >
+              PNG
+            </button>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>

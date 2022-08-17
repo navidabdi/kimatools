@@ -8,6 +8,7 @@ import { waveInit } from "../../wave";
 import GradientPicker from "../Controlers/GradientPicker";
 
 import { ReactComponent as Random } from "../../assets/svg/random.svg";
+import Export from "../Export";
 
 const WavyTools = () => {
   const [config, setConfig] = useRecoilState(defaultConfigAtom);
@@ -32,7 +33,6 @@ const WavyTools = () => {
 
   return (
     <div>
-      {console.log(config)}
       <Accordion
         title="Wave"
         content={[
@@ -63,18 +63,8 @@ const WavyTools = () => {
         ]}
       />
       <Accordion title="Set Color" content={<GradientPicker />} />
-      <Accordion
-        title="Export"
-        content={
-          <button
-            onClick={randomize}
-            className="border-4 border-gray-100 px-6 py-4 flex items-center justify-center bg-indigo-400 text-white rounded-full transform transition-all hover:bg-indigo-600 hover:border-indigo-200 focus:outline-none focus:border-indigo-200"
-          >
-            <Random className="fill-current w-8 h-8" />
-            <span className="ml-4 font-bold text-white text-lg">Generate</span>
-          </button>
-        }
-      />
+
+      <Export title="Download" randomize={randomize} />
     </div>
   );
 };

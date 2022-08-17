@@ -11,9 +11,9 @@ const Canvas = ({ forwardedRef }) => {
         ref={forwardedRef}
         width="100%"
         height="100%"
-        viewBox={`0 0 1440 ${computedPath.svg.height}`}
+        viewBox={`0 0 1440 ${computedPath.svg.height ?? 500}`}
         xmlns={computedPath.svg.xmlns}
-        className="f-full transition duration-500 ease-in-out delay-150"
+        className="f-full transition duration-500 ease-in-out delay-300"
       >
         {computedPath.svg.path.map((path, i) => {
           const uniqueId = "_" + Math.random().toString(36).substr(2, 9);
