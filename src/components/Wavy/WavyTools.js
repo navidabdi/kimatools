@@ -3,11 +3,10 @@ import RangeInput from "../Controlers/RangeInput";
 import { defaultConfigAtom, computedPathAtom } from "../../atoms/Wavy";
 import { useRecoilState } from "recoil";
 
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect } from "react";
 import { waveInit } from "../../wave";
 import GradientPicker from "../Controlers/GradientPicker";
 
-import { ReactComponent as Random } from "../../assets/svg/random.svg";
 import Export from "../Export";
 
 const WavyTools = () => {

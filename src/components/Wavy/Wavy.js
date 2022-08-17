@@ -1,6 +1,5 @@
 import ExportPopup from "../ExportPopup";
 import Canvas from "./Canvas";
-import Generator from "./Generator";
 import { svgRefAtom } from "../../atoms/Wavy";
 import { useRecoilState } from "recoil";
 const Wavy = () => {
@@ -61,7 +60,7 @@ const Wavy = () => {
 
   return (
     <div>
-      <Generator />
+      <Canvas />
       <ExportPopup
         title={dataExport.title}
         description={dataExport.des}
