@@ -4,7 +4,7 @@ import { useRecoilState } from "recoil";
 import sound from "../../assets/audio/audio.m4a";
 
 import CopyColor from "../CopyColor";
-import Color from "./Color/Color";
+import Color from "./Color";
 
 import { colorPaletteSelector, copyTrigerAtom } from "../../atoms/FlatUiColor";
 const FlatUiColor = () => {
